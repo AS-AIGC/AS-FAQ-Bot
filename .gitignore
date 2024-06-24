@@ -1,4 +1,5 @@
 config.py
 nohup.out
+.DS_Store
 *.sh
 __pycache__/*

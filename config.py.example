@@ -6,7 +6,7 @@ GOOGLE_KEY = "_GOOGLE_API_KEY_"
 GEMINI_PROMPT = "_GOOGLE_GEMINI_SYSTEM_INSTRUCTIONS_"
 
 DATABASE = [
-      "https://raw.githubusercontent.com/AS-AIGC/AS-AIGFAQ/main/examples/AS-ALL.txt",
+      "https://raw.githubusercontent.com/AS-AIGC/AS-FAQ-Bot/main/data/AS-ALL.txt",
       # and more
     ]
 
