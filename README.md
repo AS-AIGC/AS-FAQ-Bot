@@ -94,11 +94,11 @@ This project demonstrates how to create a Line bot that integrates with Google's
 
 ## Contributing
 
-Contributions are welcome! Please read our [Contributing Guidelines](notion://www.notion.so/cclljj/CONTRIBUTING.md) before submitting a pull request.
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting a pull request.
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
