@@ -4760,7 +4760,7 @@ contact: 秘書處議事科
 
 category: 院級會議
 title: 評議會
-context: 中央研究院評議員的總數是81位(截至民國114年(2025年)1月2日)。
+context: 中央研究院評議員的總數是82位(截至民國114年(2025年)1月10日)。
 url: https://www.sinica.edu.tw/Tab/7/1
 contact: 秘書處議事科
 
