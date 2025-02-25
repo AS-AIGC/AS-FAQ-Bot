@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+google-generativeai
+openai
+groq
+sentence-transformers
+faiss-cpu
+requests
+numpy
+pandas
+googletrans
