@@ -1,0 +1,18 @@
+{
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.5.15",
+        "daisyui": "^4.10.2",
+        "jquery": "^3.6.4",
+        "tailwindcss": "^3.4.3"
+    },
+    "dependencies": {
+        "@tailwindcss/forms": "^0.5.7",
+        "axios": "^1.7.9",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2",
+        "express-rate-limit": "^7.5.0"
+    },
+    "scripts": {
+        "watch": "npx tailwindcss -i ./src/css/tailwind-input.css -o ./src/css/tailwind-output.css --watch --minify -c tailwind.config.js"
+    }
+}
