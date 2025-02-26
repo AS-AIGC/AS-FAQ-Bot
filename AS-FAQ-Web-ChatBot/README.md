@@ -11,6 +11,7 @@ AS-FAQ-RAG 是一個基於 RAG（Retrieval-Augmented Generation）技術的 FAQ 
 **English**  
 This project (**AS-FAQ-Web-ChatBot**) is the front-end chat interface for **AS-FAQ-RAG** and includes the functionality to call the back-end API.  
 AS-FAQ-RAG is an FAQ system based on RAG (Retrieval-Augmented Generation) technology. It combines a front-end web interface with a back-end API to provide automated responses to frequently asked questions. The front-end web interface, **AS-FAQ-Web-ChatBot**, offers a user-friendly interface, while the back-end API, **AS-FAQ-RAG**, handles data retrieval and answer generation.
+
 ---
 
 ## 安裝 / Installation
