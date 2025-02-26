@@ -69,3 +69,7 @@ Before deploying this project, configure the following environment variables:
     - Log into the LINE Developers console, then go to your Channel’s **Messaging API** settings.
     - Paste the HTTPS URL from the previous step into the Webhook URL field.
     - Verify and enable the Webhook.
+4. **Configure the LINE Chatbot Webhook**
+    - Log into the LINE Developers console, then go to your Channel’s **Messaging API** settings.
+    - Paste the HTTPS URL from the previous step into the Webhook URL field.
+    - Verify and enable the Webhook.
