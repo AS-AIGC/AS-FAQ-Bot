@@ -284,23 +284,6 @@ YOUR-DIR/
 
 ---
 
-## 編輯使用條款及個資政策網頁 / Editing Terms of Service & Privacy Policy Pages
-
-**繁體中文**
-
-將使用條款 (`tos.html`) 與個資政策 (`privacy.html`) 放在與 `index.html` 同一層目錄，
-
-或在 `index.html` 中將其指向現有的網頁連結。
-
-**English**
-
-Place the Terms of Service (`tos.html`) and Privacy Policy (`privacy.html`) files in the same directory as `index.html`,
-
-or modify the corresponding links in `index.html` to point to your existing pages.
-
-
----
-
 ## Acknowledgements
 
 **繁體中文**  
