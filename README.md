@@ -1,5 +1,7 @@
 # AS-FAQ-Bot
 
+https://img.shields.io/badge/Academia%20Sinica-%23006E99.svg?style=for-the-badge
+
 AS-FAQ-RAG是一個基於 RAG（Retrieval-Augmented Generation）技術的 FAQ 系統。它結合了前端網頁和後端 API，提供了一個解決方案來處理常見問題的自動回答。前端網頁 **AS-FAQ-Web-ChatBot** 提供使用者介面，而後端 API **AS-FAQ-RAG** 負責處理資料檢索與生成回答。
 
 This project demonstrates how to create a robust FAQ system using Retrieval-Augmented Generation (RAG) technology. By integrating a user-friendly web interface with a powerful backend API, it efficiently handles and answers frequently asked questions.
