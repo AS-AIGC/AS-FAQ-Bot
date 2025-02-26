@@ -1,32 +1,28 @@
 # AS-FAQ-RAG
 
-## 繁體中文
-AS-FAQ-RAG是一個基於 RAG（Retrieval-Augmented Generation）技術的 FAQ 系統。它結合了前端網頁和後端 API，提供了一個解決方案來處理常見問題的自動回答。前端網頁 AS-FAQ-Web-ChatBot 提供了用戶友好的界面，而後端 API AS-FAQ-RAG 負責處理數據檢索和生成回答。
-
-## English
-AS-FAQ-RAG is an FAQ system based on RAG (Retrieval-Augmented Generation) technology. It combines a front-end web interface and a back-end API to provide a solution for automatically answering frequently asked questions. The front-end web page, AS-FAQ-Web-ChatBot, offers a user-friendly interface, while the back-end API, AS-FAQ-RAG, handles data retrieval and generates responses.
-
 ---
 
 ## 介紹 | Introduction
 
 ### 繁體中文
-本項目是 AS-FAQ-RAG 的後端 API。
+本項目是 **AS-FAQ-RAG** 的後端 API。  
+AS-FAQ-RAG是一個基於 RAG（Retrieval-Augmented Generation）技術的 FAQ 系統。它結合了前端網頁和後端 API，提供了一個解決方案來處理常見問題的自動回答。前端網頁 **AS-FAQ-Web-ChatBot** 提供了使用者友善的界面，而後端 API **AS-FAQ-RAG** 負責處理數據檢索和生成回答。
 
 ### English
-This project is the back-end API for AS-FAQ-RAG.
+This project is the back-end API for AS-FAQ-RAG.  
+AS-FAQ-RAG is an FAQ system based on RAG (Retrieval-Augmented Generation) technology. It combines a front-end web interface and a back-end API to provide a solution for automatically answering frequently asked questions. The front-end web page, AS-FAQ-Web-ChatBot, offers a user-friendly interface, while the back-end API, AS-FAQ-RAG, handles data retrieval and generates responses.
 
 ---
 
 ## 安裝 | Installation
 
-> **繁體中文**  
-> 1. 下載程式碼或複製專案  
-> 2. 可以選擇使用 CLI 或是 Docker compose 的方式執行  
+**繁體中文**  
+1. 下載程式碼或複製專案  
+2. 可以選擇使用 CLI 或是 Docker compose 的方式執行  
 
-> **English**  
-> 1. Download or clone the repository  
-> 2. You can choose to run it via CLI or Docker Compose  
+**English**  
+1. Download or clone the repository  
+2. You can choose to run it via CLI or Docker Compose  
 
 ---
 
@@ -60,7 +56,7 @@ This project is the back-end API for AS-FAQ-RAG.
     
     ```
     
-    REPO_URL、TRANSLATE_API 為資料彙整程式 (`update_data.py`) 使用，如果沒有要用到資料彙整的功能可以不填。
+    `REPO_URL`、`TRANSLATE_API` 為資料彙整程式 (`update_data.py`) 使用，如果沒有要用到資料彙整的功能可以不填。
     
 5. 匯入 QA 資料
     
@@ -82,11 +78,9 @@ This project is the back-end API for AS-FAQ-RAG.
     
     （port 8000 可自行修改為其他埠）
     
-    > [!TIP]
-    > 
-    > 
-    > 若是正式環境請移除 `--reload` 標籤，以避免 CPU 占用過高。
-    > 
+> [!TIP]
+> 若是正式環境請移除 `--reload` 標籤，以避免 CPU 占用過高。
+
 7. **初次啟動**需等待 `vector_database.bin` 建立。
 
 ### English
@@ -143,11 +137,9 @@ This project is the back-end API for AS-FAQ-RAG.
     
     (You can modify port 8000 to another port if needed.)
     
-    > [!TIP]
-    > 
-    > 
-    > For a production environment, remove the `--reload` flag to prevent high CPU usage.
-    > 
+> [!TIP]
+> For a production environment, remove the `--reload` flag to prevent high CPU usage.
+
 7. **On first startup**, wait for `vector_database.bin` to be created.
 
 ---

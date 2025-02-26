@@ -3,3 +3,6 @@ nohup.out
 .DS_Store
 *.sh
 __pycache__/*
+
+# VS Code settings
+.vscode/
