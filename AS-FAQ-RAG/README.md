@@ -5,10 +5,12 @@
 ## 介紹 | Introduction
 
 ### 繁體中文
+
 本項目是 **AS-FAQ-RAG** 的後端 API。  
 AS-FAQ-RAG是一個基於 RAG（Retrieval-Augmented Generation）技術的 FAQ 系統。它結合了前端網頁和後端 API，提供了一個解決方案來處理常見問題的自動回答。前端網頁 **AS-FAQ-Web-ChatBot** 提供了使用者友善的界面，而後端 API **AS-FAQ-RAG** 負責處理數據檢索和生成回答。
 
 ### English
+
 This project is the back-end API for AS-FAQ-RAG.  
 AS-FAQ-RAG is an FAQ system based on RAG (Retrieval-Augmented Generation) technology. It combines a front-end web interface and a back-end API to provide a solution for automatically answering frequently asked questions. The front-end web page, AS-FAQ-Web-ChatBot, offers a user-friendly interface, while the back-end API, AS-FAQ-RAG, handles data retrieval and generates responses.
 
@@ -17,10 +19,12 @@ AS-FAQ-RAG is an FAQ system based on RAG (Retrieval-Augmented Generation) techno
 ## 安裝 | Installation
 
 **繁體中文**  
+
 1. 下載程式碼或複製專案  
 2. 可以選擇使用 CLI 或是 Docker compose 的方式執行  
 
 **English**  
+
 1. Download or clone the repository  
 2. You can choose to run it via CLI or Docker Compose  
 
@@ -29,6 +33,7 @@ AS-FAQ-RAG is an FAQ system based on RAG (Retrieval-Augmented Generation) techno
 ### CLI 安裝 | CLI Installation
 
 #### 繁體中文
+
 1. 進入專案目錄
    ```bash
    cd AS-FAQ-RAG
@@ -498,3 +503,24 @@ curl --location 'http://127.0.0.1:8000/ask' \
 
 - **CLI 安裝 | CLI installation**: 8000
 - **Docker compose**: 4000
+
+---
+
+## Acknowledgements
+
+**繁體中文**  
+
+本專案的原始版本為 彭康軒 先生於中央研究院資訊科學所擔任研究助理時完成撰寫 (2024/10)，特此致謝。
+
+**English**  
+
+The original version of this project was authored by Mr. Kang-Hsuan Peng during his internship as a research assistant the Institute of Information Science, Academia Sinica (2024/10). We would like to express our gratitude.
+
+
+
+
+
+
+
+
+
