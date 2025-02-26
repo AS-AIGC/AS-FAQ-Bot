@@ -4,7 +4,6 @@ AS-FAQ-RAG是一個基於 RAG（Retrieval-Augmented Generation）技術的 FAQ �
 
 This project demonstrates how to create a robust FAQ system using Retrieval-Augmented Generation (RAG) technology. By integrating a user-friendly web interface with a powerful backend API, it efficiently handles and answers frequently asked questions.
 
----
 
 ## Table of Contents
 
@@ -14,7 +13,7 @@ This project demonstrates how to create a robust FAQ system using Retrieval-Augm
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
----
+
 
 ## Features
 
@@ -30,7 +29,7 @@ This project demonstrates how to create a robust FAQ system using Retrieval-Augm
   - Integrates with various AI services, providing diverse responses
   - User-friendly interface design, improving user experience
 
----
+
 
 ## Installation
 
@@ -42,19 +41,19 @@ Please refer to the `README.md` in the directory:
 - [AS-FAQ-RAG](AS-FAQ-RAG/README.md)
 - [AS-FAQ-Web-ChatBot](AS-FAQ-Web-ChatBot/README.md)
 
----
+
 
 ## Contributing
 
 Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting a pull request.
 
----
+
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
+
 
 ## Acknowledgements
 
