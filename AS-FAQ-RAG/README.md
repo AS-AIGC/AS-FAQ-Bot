@@ -510,11 +510,11 @@ curl --location 'http://127.0.0.1:8000/ask' \
 
 **繁體中文**  
 
-本專案的原始版本為 彭康軒 先生於中央研究院資訊科學所擔任研究助理時完成撰寫 (2024/10)，特此致謝。
+本專案的原始版本為 [彭康軒](https://github.com/MKE0108) 先生於中央研究院資訊科學所擔任研究助理時完成撰寫 (2024/10)，特此致謝。
 
 **English**  
 
-The original version of this project was authored by Mr. Kang-Hsuan Peng during his internship as a research assistant the Institute of Information Science, Academia Sinica (2024/10). We would like to express our gratitude.
+The original version of this project was authored by Mr. [Kang-Syuan Peng](https://github.com/MKE0108) during his internship as a research assistant the Institute of Information Science, Academia Sinica (2024/10). We would like to express our gratitude.
 
 
 
