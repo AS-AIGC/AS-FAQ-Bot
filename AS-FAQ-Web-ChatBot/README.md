@@ -297,8 +297,10 @@ or modify the corresponding links in `index.html` to point to your existing page
 ## Acknowledgements
 
 **繁體中文**  
+
 本專案的原始版本為 墜昆陵 先生於中央研究院資訊服務處服務時完成撰寫 (2025/01)，特此致謝。
 
 **English**  
+
 The original version of this project was authored by Mr. Kun-Ling Zui during his service at the Department of Information Technology Services of Academia Sinica (2025/01). We would like to express our gratitude.
 
