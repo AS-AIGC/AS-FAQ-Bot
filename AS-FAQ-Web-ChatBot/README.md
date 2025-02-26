@@ -5,10 +5,12 @@
 ## 介紹 / Introduction (AS-FAQ-Web-ChatBot)
 
 **繁體中文**  
+
 本項目 **AS-FAQ-Web-ChatBot** 是 **AS-FAQ-RAG** 的前端聊天介面，並包含呼叫後端 API 的功能。  
 AS-FAQ-RAG 是一個基於 RAG（Retrieval-Augmented Generation）技術的 FAQ 系統。它結合了前端網頁和後端 API，提供了一個解決方案來自動回應常見問題。前端網頁 **AS-FAQ-Web-ChatBot** 提供了使用者友善的介面，而後端 API **AS-FAQ-RAG** 負責處理數據檢索和產生答案。
 
 **English**  
+
 This project (**AS-FAQ-Web-ChatBot**) is the front-end chat interface for **AS-FAQ-RAG** and includes the functionality to call the back-end API.  
 AS-FAQ-RAG is an FAQ system based on RAG (Retrieval-Augmented Generation) technology. It combines a front-end web interface with a back-end API to provide automated responses to frequently asked questions. The front-end web interface, **AS-FAQ-Web-ChatBot**, offers a user-friendly interface, while the back-end API, **AS-FAQ-RAG**, handles data retrieval and answer generation.
 
@@ -17,9 +19,11 @@ AS-FAQ-RAG is an FAQ system based on RAG (Retrieval-Augmented Generation) techno
 ## 安裝 / Installation
 
 **繁體中文**  
+
 以下提供兩種安裝方式：使用 CLI 或使用 Docker Compose。
 
 **English**  
+
 Below are two methods of installation: using the CLI or using Docker Compose.
 
 ---
@@ -32,6 +36,7 @@ Below are two methods of installation: using the CLI or using Docker Compose.
 - **npm** 8.15.0
 
 **繁體中文**  
+
 1. 進入專案目錄
     ```bash
     cd AS-FAQ-Web-ChatBot
@@ -61,6 +66,7 @@ Below are two methods of installation: using the CLI or using Docker Compose.
 6. 開啟瀏覽器，並輸入網址：http://localhost:3000
 
 **English**  
+
 1. Enter the project directory:
     ```bash
     cd AS-FAQ-Web-ChatBot
@@ -94,6 +100,7 @@ Below are two methods of installation: using the CLI or using Docker Compose.
 ### Docker compose 安裝 / Docker Compose Installation
 
 **繁體中文**  
+
 1. 進入專案目錄
     ```bash
     cd AS-FAQ-Web-ChatBot
@@ -113,6 +120,7 @@ Below are two methods of installation: using the CLI or using Docker Compose.
 4. 開啟瀏覽器，並輸入網址：http://localhost:3080
 
 **English**  
+
 1. Enter the project directory:
     ```bash
     cd AS-FAQ-Web-ChatBot
@@ -136,6 +144,7 @@ Below are two methods of installation: using the CLI or using Docker Compose.
 ### Docker compose 同時安裝 Web 及 API / Installing Web & API Together with Docker Compose
 
 **繁體中文**  
+
 假設您的目錄架構如下：
 
 ```plain text
@@ -208,8 +217,6 @@ YOUR-DIR/
 Assume your directory structure is as follows:
 
 ```
-plain
-CopyEdit
 YOUR-DIR/
 ├── docker-compose.yml
 ├── AS-FAQ-RAG/
