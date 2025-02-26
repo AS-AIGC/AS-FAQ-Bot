@@ -309,5 +309,5 @@ or modify the corresponding links in `index.html` to point to your existing page
 
 **English**  
 
-The original version of this project was authored by Mr. Kun-Ling Zui during his service at the Department of Information Technology Services of Academia Sinica (2025/01). We would like to express our gratitude.
+The original version of this project was authored by Mr. [Kun-Ling Zui](https://github.com/jhuei0831) during his service at the Department of Information Technology Services of Academia Sinica (2025/01). We would like to express our gratitude.
 
