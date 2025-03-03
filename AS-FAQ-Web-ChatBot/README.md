@@ -284,6 +284,43 @@ YOUR-DIR/
 
 ---
 
+## 編輯使用條款及個資政策網頁 / Editing Terms of Service & Privacy Policy Pages
+
+**繁體中文**
+
+將使用條款 (`tos.html`) 與個資政策 (`privacy.html`) 放在與 `index.html` 同一層目錄，或在 `index.html` 中將其指向現有的網頁連結。
+
+在 `index.html` 中，你可以使用 JavaScript 變數來動態設置這些連結的 URL。
+```html
+<script>
+    // 定義變數來存儲連結的 URL
+    const tosUrl = "tos.html";
+    const privacyPolicyUrl = "https://www.sinica.edu.tw/CP/377";
+
+    document.getElementById('tos-link').href = tosUrl;
+    document.getElementById('privacy-policy-link').href = privacyPolicyUrl;
+</script>
+```
+
+**English**
+
+Place the Terms of Service (`tos.html`) and Privacy Policy (`privacy.html`) files in the same directory as index.html, or modify the corresponding links in index.html to point to your existing pages.
+
+In `index.html`, you can use JavaScript variables to dynamically set the URLs for these links. Here is an example code:
+```html
+<script>
+    // Define variables to store the URLs
+    const tosUrl = "tos.html";
+    const privacyPolicyUrl = "https://www.sinica.edu.tw/CP/377";
+
+    document.getElementById('tos-link').href = tosUrl;
+    document.getElementById('privacy-policy-link').href = privacyPolicyUrl;
+</script>
+```
+
+
+---
+
 ## Acknowledgements
 
 **繁體中文**  

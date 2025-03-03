@@ -41,7 +41,10 @@
                     <!-- 同意使用條款 -->
                     <div class="text-center text-gray-500 text-xs mt-1">使用本服務即表示您同意遵守以下使用條款。</div>
                     <!-- 個資政策、使用條款 -->
-                    <div class="text-center text-gray-500 text-xs mt-1"><a href="tos.html" target="_blank" class="text-blue-500 underline">使用條款</a> • <a href="privacy.html" target="_blank" class="text-blue-500 underline">個資政策</a></div>
+                    <div class="text-center text-gray-500 text-xs mt-1">
+                        <a id="tos-link" target="_blank" class="text-blue-500 underline">使用條款</a> • 
+                        <a id="privacy-policy-link" target="_blank" class="text-blue-500 underline">個資政策</a>
+                    </div>
                 </div>
                 <div class="divider hidden">開始聊天</div>
             </div>
@@ -58,4 +61,12 @@
 </body>
 <script src="./js/chatbot.js"></script>
 <script src="./js/age-verification.js"></script>
+<script>
+    // 定義變數來存儲連結的 URL
+    const tosUrl = "tos.html";
+    const privacyPolicyUrl = "https://www.sinica.edu.tw/CP/377";
+
+    document.getElementById('tos-link').href = tosUrl;
+    document.getElementById('privacy-policy-link').href = privacyPolicyUrl;
+</script>
 </html>
