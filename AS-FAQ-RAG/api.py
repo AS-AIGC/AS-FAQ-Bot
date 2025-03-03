@@ -1,11 +1,19 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, HTTPException
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Generator
 import json
-from utils.respond import SearchQASystem, CONFIG
+import logging
+from utils.respond import SearchQASystem, CONFIG, LLMProvider
 
 app = FastAPI()
+
+# Configure logging
+logging.basicConfig(
+    level=logging.ERROR,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 # Add CORS middleware
 app.add_middleware(
@@ -35,7 +43,11 @@ def stream_response(query: str) -> Generator[str, None, None]:
         # print(f"AI Answer: {answer}")
         yield json.dumps({"answer": answer, "sources": sources})
     except Exception as e:
-        yield json.dumps({"error": str(e)})
+        # Log the error on the server
+        logging.error("An error occurred: %s", str(e))
+        # Return an error response to the client
+        yield json.dumps({"error": "An internal error has occurred!"})
+        raise HTTPException(status_code=500, detail="Internal Server Error")
 
 @app.post("/ask")
 async def ask_question(request: Request):

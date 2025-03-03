@@ -8,6 +8,8 @@ const app = express();
 
 // 提供靜態文件 (HTML, CSS)，tailwindcss
 app.use(express.static(path.join(__dirname, 'src')));
+// 移除 Express 預設的 X-Powered-By 標頭
+app.disable('x-powered-by');
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'index.html'));
