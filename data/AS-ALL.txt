@@ -5187,7 +5187,7 @@ contact: 資訊服務處服務台 02-2789-8855
 
 category: 行政專用服務-資安專區
 title: 資安通報流程
-context: 中研院各單位於發生資安事件發生時，通報流程圖請參考網站https://its.sinica.edu.tw/posts/119676，通報資訊服務處資安小組即時掌握事件狀況，由資安小組依照事件類型進行處理，透過這些通報、處理機制，可有效防止事件擴大造成影響。
+context: 中研院各單位於發生資安事件發生時，通報流程圖請參考網站 https://its.sinica.edu.tw/posts/119676，通報資訊服務處資安小組即時掌握事件狀況，由資安小組依照事件類型進行處理，透過這些通報、處理機制，可有效防止事件擴大造成影響。
 url: https://its.sinica.edu.tw/posts/119676
 contact: 資訊服務處服務台 02-2789-8855
 
@@ -5312,6 +5312,20 @@ contact: 資訊服務處服務台 02-2789-8855
 
 
 category: 全院共用服務-資安專區
+title: 社交工程防護與案例
+context: 資訊服務處針對社交工程攻擊防範及建議，提供相關參考文件，包含社交工程名詞定義、電子郵件社交工程防範、網路釣魚郵件防範、電子郵件防範，以及如何啟用強化身分驗證機制的功能，詳細說明請參考： https://its.sinica.edu.tw/archives/1485c1a30a28f395。
+url: https://its.sinica.edu.tw/archives/1485c1a30a28f395
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 行政專用服務-資安專區
+title: 弱點掃描工具建議
+context: 資訊服務處建議的弱點掃描工具，分為主機弱點掃描、網站弱點掃描和原始碼檢測。主機弱點掃描工具，建議使用 Tenable Nessus 和 Rapid7 Nexpose；網站弱點掃描，建議使用 HCL AppScan、Acunetix 和 HP Webinspect；原始碼檢測，建議使用 Checkmarx 和 Fortify。
+url: https://its.sinica.edu.tw/posts/155190
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-資安專區
 title: 中研院「電子郵件寄送格式指引」
 context: 中央研究院電子郵件寄送格式指引一、 為降低中研院院同仁遭受詐騙或釣魚信件風險，增加院內信件辨識資訊，提高同仁收信安全，特定本指引事項。二、 本指引事項適用：單位內公告、會議通知、系統自動通知信等，亦可視各單位情況進行其他應用。三、 相關建議如下：(一) 寄件者欄位應清楚標註中英文姓名，並視需求加註中英文單位簡稱或職稱。(二) 收件者欄位填寫業務帳號信箱或承辦人信箱，真實收件者置放於 e-mail 之密件副本欄位。(三) 信件主旨開頭統一使用識別特徵，例資訊服務處之信件主旨識別特徵為[AS-ITS]。(四) 信件內容避免提供縮網址及 QR Code。(五) 若信件內容與外籍同仁相關，應同時附上英文主旨及內容。(六) 信件內文署名應中英文並列，內容須包含單位名稱、承辦人職稱、姓名、電話及 e-mail。單位名稱應載明「中央研究院」，及寄件者所屬之單位全稱。(七) 如無特殊格式需求，可使用純文字格式進行寄送，一行不超過 30 字中文(60 字元)為宜。(八) 信件以主管名義寄送者，需註明由承辦人轉寄並留存聯絡資訊。四、 如 e-mail 來信已參照制式格式，仍須謹慎評估信件內容或附件是否仍有疑慮之處，視需要可透過電話或其他管道再次確認，以確保郵件來源正常。詳細說明請參考：https://its.sinica.edu.tw/posts/164177。
 url: https://its.sinica.edu.tw/posts/164177
@@ -5322,6 +5336,13 @@ category: 全院共用服務-資安專區
 title: 近期終止支援軟體清單
 context: 資訊服務處每半年會定期更新、公告近期終止支援軟體清單，其中包含Windows、Windows Server、CentOS、Red Hat Enterprise Linux、Apache HTTP Server、MySQL、SQL Server、Maria DB、PostgreSQL、PHP、Nginx，請配合停用過舊(End Of Service)版本軟體，詳細版本終止支援時間請參考網頁：https://its.sinica.edu.tw/posts/167143。
 url: https://its.sinica.edu.tw/posts/167143
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 行政專用服務-資安專區
+title: 端點防護
+context: 中研院使用 Xensor 軟體進行相關端點防護，此軟體提供資訊安全防護服務，可簡化資安問題的發現和修復，以降低資訊安全維護成本。該服務可分為前期：進行定期檢測端點狀態；中期：發生資安事件後，可快速比對系統資安基準，並發現攻擊來源和橫向擴散範圍，以及早處置並進行災損控制；後期：可持續觀察事件處理狀況和異常行為。Xensor 的運作方式為數位鑑識報告收集工具，可透過快速掃描完成數位鑑識的資料分析和蒐集，分析內容包括 Windows 系統的 C 槽、系統目錄的檔案、執行檔、開機啟動項目程式、排程啟動程式和網路連線狀態，並掃描記憶體內容判斷是否有惡意程式執行。Xensor 支援的平台包括 Windows Server 2008 R2 以上、Windows 7 SP1 以上、Linux 和 MacOS 等。詳細申請方式及軟體下載資訊請見：https://its.sinica.edu.tw/pages/2531。
+url: https://its.sinica.edu.tw/pages/2531
 contact: 資訊服務處服務台 02-2789-8855
 
 
