@@ -1651,13 +1651,6 @@ contact: 2787-2565
 
 
 category: 導覽參訪
-title: 預約參訪
-context: 請點擊官方網站進行了解(參考秘書處服務專區相關資訊https://sec.sinica.edu.tw/pages/1561)
-url: https://sec.sinica.edu.tw/pages/1561
-contact: 宋小姐 2789-9727
-
-
-category: 導覽參訪
 title: 導覽改期或取消
 context: 請逕向申請參訪單位聯繫或與本院秘書處聯絡：Email: sc@gate.sinica.edu.tw，電話：02-2787-9727
 url: https://sec.sinica.edu.tw/pages/1561
@@ -1713,13 +1706,6 @@ url: https://sec.sinica.edu.tw/pages/1561
 contact: 宋小姐 2789-9727
 
 
-category: 導覽參訪
-title: 參訪報到
-context: 建議您於導覽前10到15分鐘抵達先行報到。
-url: https://sec.sinica.edu.tw/pages/1561
-contact: 宋小姐 2789-9727
-
-
 category: 新聞媒體
 title: 新聞發佈
 context: 請聯繫本院媒體公共事務小組02-2787-2717，或將需求寄至媒體小組連絡信箱：asmedia＠gate.sinica.edu.tw
@@ -1738,7 +1724,7 @@ category: 資訊宣傳
 title: 活動訊息宣傳
 context: 請參考本院網站資訊https://sec.sinica.edu.tw/pages/4196，填寫「各單位訊息刊登申請表」，並寄送至webnews@gate.sinica.edu.tw
 url: https://sec.sinica.edu.tw/pages/4196
-contact: 陳小姐  2789-9488
+contact: 李小姐  2787-2717
 
 
 category: 科普活動
