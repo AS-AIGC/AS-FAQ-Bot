@@ -6691,8 +6691,22 @@ contact: 資訊服務處服務台 02-2789-8855
 
 
 category: 全院共用服務-網路資訊
+title: Google Workspace服務
+context: 為強化本院資訊系統韌性，本院導入Google Workspace雲端服務，功能包含了Gmail、雲端硬碟、文件、試算表、簡報等。(1)本服務的帳號登入帳號為：[SSO帳號@as.edu.tw](2)快速登入網址服務如下：Mail：https://mail.sinica.edu.twDrive：https://drive.sinica.edu.twCalendar：https://calendar.sinica.edu.tw(3)需綁定FIDO驗證才能登入。(4)離職或退休後，均無法使用本服務。詳細說明：https://its.sinica.edu.tw/pages/4532
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: Google Workspace服務
+context: Google Workspace (GWS)全院導入公告為提供更優質的操作介面與使用體驗,院內將自 114 年 3 月 20 日起,逐步導入 Google Workspace (GWS)。此次變更將影響電子郵件與雲端儲存,請特別留意以下事項:1. Google Gmail 及 Google Drive 取代現有系統本次導入 GWS 後,將進行以下變更:● Google Gmail 取代 個人 Gate 電子郵件系統。● Google Drive 取代 Myspace 個人雲端儲存服務。● 同時提供 Google Meet、Google Docs、Google Sheets 等協作工具,以提升工作效率。2. 新增外部雲端服務專用帳號為了區別院內行政服務與外部雲端應用,本次導入 以 SSO 帳號搭配 @as.edu.tw 網域的專用帳號,此做法符合國際學研機構的使用方式。3. 電子郵件地址變更與存取方式● E-mail 位址不變:您的 SSO 帳號仍對應 SSO@gate.sinica.edu.tw,不影響收信功能。● 提供簡短版的 E-mail 位址:● 除原有信箱外,新增 SSO@sinica.edu.tw 及 SSO@as.edu.tw 作為別名。● 寄至上述任何一個地址的郵件,皆可在您的信箱存取。4. 登入方式(提供兩種登入管道)1. 透過「中研院入口網」或 https://mail.sinica.edu.tw 登入○ 使用您的 SSO 帳號,並透過 FIDO 驗證 登入。2. 透過 Google 雲端服務 https://www.google.com 登入○ 登入帳號為 SSO@as.edu.tw,並依照網頁指示完成登入驗證。○ 未來所有外部雲端服務均使用此帳號登入。5. Google Gmail 與 Google Drive 儲存空間● 每位使用者將享有 50GB 合併儲存空間(包含 Gmail + Google Drive)。6. Myspace 服務即將終止● Myspace 服務將於全院完成 GWS 導入後停止。● 請自行下載並保存 Myspace 檔案,以確保資料不遺失。● 未來,如需儲存與分享檔案,請使用 Google Drive。7. 帳號切換與郵件移轉● 帳號切換時間:各單位於導入當日前一晚 18:00 起進行切換作業。● 切換後影響:○ 所有新郵件將改寄至 Google Gmail,Gate 系統將不再提供收信服務。○ 原存放於 Gate 電子郵件系統的舊信件,需由本人移轉至 Google Gmail。8. 其他提醒事項● 詳細操作手冊:○ 我們已準備完整指南,包含 帳號登入、信件設定與轉移、Outlook 設定、Google Drive 使用 等,請參閱 操作手冊 以順利完成轉換。詳細說明：https://its.sinica.edu.tw/pages/4532● 業務帳號不受影響:○ 本次導入不包含業務帳號,業務帳號仍繼續使用 Gate 電子郵件系統。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
 title: 個人雲端儲存服務
-context: 中研院個人雲端儲存服務，提供每位同仁40GB雲端儲存空間，以及版本存留功能，可以恢復近10次版本檔案。單一檔案上傳最大2GB，並可在個人電腦安裝代理程式(agent)後，業務檔案可同步備份至雲端儲存平台，強化檔案保全。相關操作說明及手冊請參考https://its.sinica.edu.tw/pages/1683。
+context: 中研院個人雲端儲存服務，提供每位同仁40GB雲端儲存空間，以及版本存留功能，可以恢復近10次版本檔案。單一檔案上傳最大2GB，並可在個人電腦安裝代理程式(agent)後，業務檔案可同步備份至雲端儲存平台，強化檔案保全。相關操作說明及手冊請參考https://its.sinica.edu.tw/pages/1683。本服務即將於114年下架，請同仁提早備份並改用GWS服務。
 url: https://its.sinica.edu.tw/pages/1683
 contact: 資訊服務處服務台 02-2789-8855
 
@@ -6761,28 +6775,28 @@ contact: 資訊服務處服務台 02-2789-8855
 
 
 category: 全院共用服務-網路資訊
-title: 電子郵件服務
-context: 中研院資訊服務處為中研院在職同仁和正式退休人員提供電子郵件服務。當同仁完成報到程序後，可以在線上申請員工SSO帳號，兩小時後可以開始使用電子郵件服務。每個帳號可使用20GB磁碟空間，並支援POP3或IMAP兩種讀取方式，中研院同仁可隨時透過Webmail收發信件。為提升中研院電子郵件存取之安全性，自111年9月1日起，IMAP和POP3服務僅限於中研院和VPN IP範圍內使用。同樣地，自113年4月23日起，SMTP寄信服務限中研院網路(包含VPN服務)使用。自113年4月23日起，所有使用中研院Gate信箱的同仁必須在Webmail操作介面強制啟用雙驗證功能，結合手機的OTP機制，以增強帳戶的安全性。自114年3月20日起,本院電子郵件帳號機制調整如下:1.離職同仁之院內信箱將於離職生效日起停用。如有業務需求,仍可依現行機制申請延用。2.退休同仁(不含約聘僱人員)將配發[SSO帳號@alum.sinica.edu.tw]信箱,並自退休日起原信箱收信將自動轉寄至該信箱,詳情參閱https://its.sinica.edu.tw/alumni 說明。
+title: GWS電子郵件及硬碟服務
+context: 為提供本院同仁一個更便利的電子郵件暨雲端硬碟服務，自114年3月20日起，逐步將本院SSO Gate帳號導入GWS電子郵件暨雲端硬碟服務。業務帳號及既有退休人員帳號將於第二階段導入。帳號申請本服務依 中央研究院電子郵件服務規範 (https://www.sinica.edu.tw/CP/382) 提供服務。個人帳號 –本院同仁於完成人事報到程序且到職日生效後，自動取得與本院SSO帳號名稱一致之GWS電子郵件暨雲端硬碟服務帳號。申請帳號後2小時洽詢各單位資訊室管理者完成綁定FIDO驗證，方能登入使用。離職後無法使用本服務，正編退休人員請改用@alum服務。業務帳號 -將於第二階段導入後開放申請。有需求請先申請原Gate電子郵件業務帳號服務。登入、驗證及使用快速登入網址如下：        Mail：https://mail.sinica.edu.tw        Drive：https://drive.sinica.edu.tw操作及設定請參閱員工使用指引 – https://its.sinica.edu.tw/pages/4532個人帳號 – 登入驗證方式與本院入口網（https://sso.sinica.edu.tw）相同。業務帳號 - 將於第二階段導入後開放申請。如有需求請先申請原Gate電子郵件業務帳號服務。
 url: https://its.sinica.edu.tw/posts/117170
 contact: 資訊服務處服務台 02-2789-8855
 
 
 category: 全院共用服務-網路資訊
-title: 電子郵件服務
-context: 中研院資訊服務處提供業務用電子郵件帳號，供中研院同仁申請，用於處理公務或作為代表信箱。申請業務用郵件帳號可透過全院電子表單整合平台進行線上申請，或填寫紙本申請單後送交至行政大樓4樓資訊服務處。詳細資訊請參閱https://its.sinica.edu.tw/posts/117175。
+title: 業務用電子郵件服務
+context: 中研院資訊服務處提供業務用Gate電子郵件帳號，供中研院同仁申請，用於處理公務或作為代表信箱。本服務預計於115年導入GWS服務。申請業務用郵件帳號可透過全院電子表單整合平台進行線上申請，或填寫紙本申請單後送交至行政大樓4樓資訊服務處。詳細資訊請參閱https://its.sinica.edu.tw/posts/117175。
 url: https://its.sinica.edu.tw/posts/117175
 contact: 資訊服務處服務台 02-2789-8855
 
 
 category: 全院共用服務-網路資訊
-title: 電子郵件服務
-context: 中研院的電子郵件服務要求密碼的有效期限為180天，系統會在密碼到期前寄送提醒信件，請於期限內進行密碼修改，以避免無法進入信箱。如果需要進行密碼修改或重設，請至webamil(https://gate.sinica.edu.tw)首頁，選擇需要變更密碼的帳號類別，然後按照指示進行密碼重設作業。員工帳號-SSO account為您的個人公務信箱，進入後請選擇密碼重設按鈕，進行密碼重設，業務帳號Business account，進入後可進行密碼修改或密碼重設，密碼修改您需要於密碼過期前，透過當前使用的密碼進行修改，若密碼已過期請直接使用密碼重設功能進行密碼重設，請留意業務帳號重設時需使用申請人或使用人的個人公務信箱進行驗證。為保障帳號安全，密碼設定應遵循以下原則：1) 密碼長度至少8個字母、數字或其它標點符號，2) 大小寫字母視為不同符號，3) 必須包含至少一個字母和數字。過於簡單、容易猜測的密碼容易被駭客入侵，進而威脅到其他同仁的帳號安全和權益。如果系統發現帳號有被疑似駭客入侵的風險，會暫時停用該帳號以保障資訊安全。
-url: https://its.sinica.edu.tw/posts/117176
+title: 個人電子郵件服務
+context: GWS服務可使用Thunderbird、Windows Live Mail 2011、Microsoft Outlook、Android、MAC OSX、 iOS (iphone/ipad)等軟體來收發信件。設定值快速一覽表：    SMTP（外寄伺服器）： 伺服器為 smtp.gmail.com，使用 Port 465    IMAP（內送伺服器，支援 SSL）： 伺服器為 imap.gmail.com，使用 Port 993相關設定請參考：https://its.sinica.edu.tw/pages/4694
+url: https://its.sinica.edu.tw/posts/117185
 contact: 資訊服務處服務台 02-2789-8855
 
 
 category: 全院共用服務-網路資訊
-title: 電子郵件服務
+title: 業務用電子郵件服務
 context: 中研院電子郵件服務可使用Thunderbird、Windows Live Mail 2011、Microsoft Outlook、Android、MAC OSX、 iOS (iphone/ipad)等軟體來收發信件。基本設定如下：帳號為您的SSO帳號，密碼為您的SSO密碼，SMTP(外寄伺服器)smtp.sinica.edu.tw，port:25；SMTP with TLS (外寄加密)：smtp.sinica.edu.tw，port:25；SMTPS (外寄加密)：smtp.sinica.edu.tw，port:25；POP(s) (pop內送伺服器)：gate.sinica.edu.tw，POP port:110，POPS port:995；IMAP(s) (imap內送伺服器):gate.sinica.edu.tw，IMAP port:143，IMAPS port:993。服務使用限制IMAP/POP3收信服務及SMTP寄信服務限中研院網路環境使用，若在院外有需要透過第三方收信軟體收發信件請連線VPN服務後使用，其他詳細設定請參考網站https://its.sinica.edu.tw/posts/117220。
 url: https://its.sinica.edu.tw/posts/117185
 contact: 資訊服務處服務台 02-2789-8855
@@ -6796,15 +6810,15 @@ contact: 資訊服務處服務台 02-2789-8855
 
 
 category: 全院共用服務-網路資訊
-title: 電子郵件服務
-context: 自113年4月23日起，Gate信箱之 Webmail 操作介面將全面「強制」啟用雙驗證功能，結合手機的OTP（One Time Password）機制，加強您電子郵件信箱的安全。強制啟用OTP操作說明：登入程序完成帳密驗證後，畫面會顯示2維條碼，請於行動裝置下載安裝Google Authenticator APP後，掃描2維條碼，取得6位數動態認證碼。完成登入後，系統提供2種雙驗證使用方式，第一種方法是使用@Mail2000APP設定雙重驗證，第二種方法是維持Google Authenticator雙驗證，您可以依需求切換驗證方式。請注意，如發生無法收取驗證碼狀況，導致無法登入修改設定時，須本人或資訊室人員填寫服務洽詢單( https://8855.sinica.edu.tw )，由系統管理員協助設定與重新啟用，設定時間約0.5個「工作天」。請參考https://its.sinica.edu.tw/posts/117218 網站以了解更詳細的設定方式。
+title: 業務用電子郵件服務
+context: 自113年4月23日起，Gate業務用電子郵件信箱之 Webmail 操作介面將全面「強制」啟用雙驗證功能，結合手機的OTP（One Time Password）機制，加強您電子郵件信箱的安全。強制啟用OTP操作說明：登入程序完成帳密驗證後，畫面會顯示2維條碼，請於行動裝置下載安裝Google Authenticator APP後，掃描2維條碼，取得6位數動態認證碼。完成登入後，系統提供2種雙驗證使用方式，第一種方法是使用@Mail2000APP設定雙重驗證，第二種方法是維持Google Authenticator雙驗證，您可以依需求切換驗證方式。請注意，如發生無法收取驗證碼狀況，導致無法登入修改設定時，須本人或資訊室人員填寫服務洽詢單( https://8855.sinica.edu.tw )，由系統管理員協助設定與重新啟用，設定時間約0.5個「工作天」。請參考https://its.sinica.edu.tw/posts/117218 網站以了解更詳細的設定方式。
 url: https://its.sinica.edu.tw/posts/117218
 contact: 資訊服務處服務台 02-2789-8855
 
 
 category: 全院共用服務-網路資訊
-title: 電子郵件服務
-context: 使用中研院的電子郵件服務時，會收到電子郵件登入成功或登入失敗的訊息通知。如收到登入成功通知，請確認該時間點是否為本人登入行為；若您收到登入失敗通知，通常是一般駭客嘗試想要登入信箱所產生的，表示該嘗試登入並未成功，只要確認好您的帳號密碼強度夠強即可，並經常透過webmail ，點選個人設定，由信箱安全功能查閱登入紀錄來確認是否有意異常登入狀況。 資訊處所提供的電子郵件服務，具備自動防禦暴力破解法功能，如單一登入位址(IP)反覆嘗試登入並且登入失敗，系統會自動阻擋該登入位址一段時間，以阻止該嘗試登入行為。 其他相關說明請參考https://its.sinica.edu.tw/posts/117228
+title: 業務用電子郵件服務
+context: 使用中研院的Gate業務用電子郵件服務時，會收到電子郵件登入成功或登入失敗的訊息通知。如收到登入成功通知，請確認該時間點是否為本人登入行為；若您收到登入失敗通知，通常是一般駭客嘗試想要登入信箱所產生的，表示該嘗試登入並未成功，只要確認好您的帳號密碼強度夠強即可，並經常透過webmail ，點選個人設定，由信箱安全功能查閱登入紀錄來確認是否有意異常登入狀況。 資訊處所提供的電子郵件服務，具備自動防禦暴力破解法功能，如單一登入位址(IP)反覆嘗試登入並且登入失敗，系統會自動阻擋該登入位址一段時間，以阻止該嘗試登入行為。 其他相關說明請參考https://its.sinica.edu.tw/posts/117228
 url: https://its.sinica.edu.tw/posts/117228
 contact: 資訊服務處服務台 02-2789-8855
 
@@ -7168,7 +7182,7 @@ contact: 資訊服務處服務台 02-2789-8855
 
 category: 全院共用服務-網路資訊
 title: GWS雲端服務
-context: 本院將於114年3月20日起正式導入GWS雲端服務以取代現行gate信箱及MySpace個人雲端服務。為確保導入過程順利,本處規劃分批導入作業,具體作業時程詳附件,上開服務下線時間請參考網頁說明https://its.sinica.edu.tw/pages/4532。
+context: 本院將於114年3月20日起正式導入GWS雲端服務以取代現行gate信箱及MySpace個人雲端服務。為確保導入過程順利,本處規劃分批導入作業，詳細資訊請參考網頁說明https://its.sinica.edu.tw/pages/4532。
 url: https://its.sinica.edu.tw/pages/4532
 contact: 資訊服務處服務台 02-2789-8855
 
