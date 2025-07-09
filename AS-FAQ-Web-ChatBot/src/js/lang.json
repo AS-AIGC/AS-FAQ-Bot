@@ -1,0 +1,26 @@
+{
+    "zh-TW": {
+        "welcome": "AS萬事通 (測試版)",
+        "ask": "問問AS萬事通吧... (目前僅一問一答，無記憶功能)",
+        "submit": "送出",
+        "disclaimer": "本服務由 AI 回答，可能存在錯誤，如有疑問請洽服務台 (02)2789-8855。",
+        "terms": "使用本服務即表示您同意遵守以下使用條款：",
+        "tosLink": "使用條款",
+        "privacyLink": "個資政策",
+        "startChat": "開始聊天",
+        "error": "發生錯誤，請稍後再試: ",
+        "tooManyRequests": "🔄 請求過多，請稍後再試。"
+    },
+    "en": {
+        "welcome": "AS Ask (Beta)",
+        "ask": "Ask... (Currently one question at a time, no memory)",
+        "submit": "Submit",
+        "disclaimer": "This service is powered by AI and may contain errors. If you have any questions, please contact the service desk at (02)2789-8855.",
+        "terms": "By using this service, you agree to the following terms:",
+        "tosLink": "Terms of Service",
+        "privacyLink": "Privacy Policy",
+        "startChat": "Start Chat",
+        "error": "An error occurred, please try again later: ",
+        "tooManyRequests": "🔄 Too many requests, please try again later."
+    }
+}

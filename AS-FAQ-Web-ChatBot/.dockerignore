@@ -1,3 +1,14 @@
 .env
 node_modules
-npm-debug.log
+*.log
+dist
+build
+.DS_Store
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# VS Code
+.vscode/

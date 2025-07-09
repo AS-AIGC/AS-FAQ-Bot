@@ -2,9 +2,24 @@ const express = require('express');
 const rateLimit = require('express-rate-limit');
 const path = require('path');
 const axios = require('axios');
+const helmet = require('helmet'); // 引入 helmet
 require('dotenv').config();
 
 const app = express();
+
+// 根據環境決定是否使用 helmet 和 HSTS
+if (process.env.NODE_ENV === 'production') {
+  // 在生產環境中使用完整的 helmet 配置
+  app.use(
+    helmet({
+      strictTransportSecurity: {
+        maxAge: 31536000, // 設定 HSTS max-age 為一年 (單位為秒)
+        includeSubDomains: true, // 套用到所有子網域
+        preload: true // 允許預載入 HSTS 清單
+      }
+    })
+  );
+}
 
 // 提供靜態文件 (HTML, CSS)，tailwindcss
 app.use(express.static(path.join(__dirname, 'src')));
@@ -36,7 +51,7 @@ app.post(['/eip/askbot', '/askbot'], async (req, res) => { // "/eip/askbot" for 
   }
   // 呼叫 API 取得答案
   try {
-    const apiUrl = process.env.API_URL;
+    const apiUrl = `${process.env.BACKEND_URL}/ask`;
     const response = await axios.post(apiUrl, { question });
     const answer = response.data.answer;
 
@@ -44,6 +59,30 @@ app.post(['/eip/askbot', '/askbot'], async (req, res) => { // "/eip/askbot" for 
   } catch (error) {
     console.error('Error calling API:', error);
     res.status(500).json({ error: 'API 呼叫失敗' });
+  }
+});
+
+// 獲取嵌入模型資訊的 endpoint
+app.get(['/api/rag/embedding-info'], async (req, res) => {
+  try {
+    const apiUrl = `${process.env.BACKEND_URL}/api/rag/embedding-info`;
+    const response = await axios.get(apiUrl);
+    res.json(response.data);
+  } catch (error) {
+    console.error('Error fetching embedding info:', error);
+    res.status(500).json({ error: '無法獲取嵌入模型資訊' });
+  }
+});
+
+// 獲取 LLM 模型資訊的 endpoint
+app.get(['/api/rag/llm-info'], async (req, res) => {
+  try {
+    const apiUrl = `${process.env.BACKEND_URL}/api/rag/llm-info`;
+    const response = await axios.get(apiUrl);
+    res.json(response.data);
+  } catch (error) {
+    console.error('Error fetching LLM info:', error);
+    res.status(500).json({ error: '無法獲取 LLM 模型資訊' });
   }
 });
 

@@ -8,4 +8,6 @@ faiss-cpu
 requests
 numpy
 pandas
-googletrans
+googletrans>=4.0.2
+schedule
+pyyaml

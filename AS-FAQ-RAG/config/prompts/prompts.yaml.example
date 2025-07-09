@@ -1,0 +1,12 @@
+SYSTEM_PROMPT: "You are a helpful assistant."
+
+TRANSLATION_PROMPT: "Translate to English: {text}"
+
+LANGUAGE_DETECTION_PROMPT: |
+    Task: Detect the language of the following text: "{query}"
+    If the text is Chinese, reply "台灣繁體中文". If the text is in any other language, reply "english".
+    Only reply with the language code.
+
+QA_PROMPT: "Answer the question: {query}"
+
+QA_PROMPT_EN: "Answer the question: {query}"

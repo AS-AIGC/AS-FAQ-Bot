@@ -3,29 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI小幫手</title>
+    <title>AS萬事通</title>
     <link rel="stylesheet" href="css/tailwind-output.css">
     <script src="vendor/jquery.min.js"></script>
+    <!-- 加入 marked.js 與 DOMPurify CDN -->
+    <script src="vendor/marked.min.js"></script>
+    <script src="vendor/dompurify.min.js"></script>
 </head>
 <body>
     <div id="chat-widget-container" class="fixed bottom-20 right-8 flex flex-col">
         <!-- 聊天氣泡圖示 -->
-        <div id="chat-bubble" class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center cursor-pointer text-3xl">
-            <img class="w-12 h-12" src="./img/bubble.svg" alt="chatbot">
+        <div id="chat-bubble" class="w-16 h-16 bg-transparent rounded-2xl flex items-center justify-center cursor-pointer text-3xl">
+            <img class="w-16 h-16" src="./img/bubble.svg" alt="chatbot">
         </div>
 
         <!-- 聊天視窗 -->
         <div id="chat-popup" class="hidden absolute bottom-20 right-0 w-chat-sm bg-white rounded-md shadow-md flex flex-col transition-all text-sm h-[70vh] max-h-[70vh] overflow-hidden max-lg:fixed max-lg:top-0 max-lg:right-0 max-lg:bottom-0 max-lg:left-0 max-lg:w-full max-lg:h-full max-lg:max-h-full max-lg:rounded-none">
             <!-- 標題列 -->
             <div id="chat-header" class="flex justify-between items-center p-4 bg-sky-600 text-white lg:rounded-t-md">
-                <h3 class="m-0 text-xl">AI小幫手 (測試版)</h3>
-                <div>
-                    <select id="size-selector" class="select select-sm bg-sky-200 text-black leading-4 mr-8">
-                        <option value="sm">視窗尺寸: 小</option>
-                        <option value="md">視窗尺寸: 大</option>
-                    </select>
+                <h3 class="m-0 text-xl">AS萬事通 (測試版)</h3>
+                <div class="flex items-center space-x-4">
+                    <button id="size-toggle" class="bg-sky-200 text-black rounded-full p-2 flex items-center justify-center">
+                        <img id="size-icon" class="w-5 h-5" src="./img/expand.svg" alt="Toggle Size">
+                    </button>
+                    <button id="lang-toggle" class="bg-sky-200 text-black rounded-full p-2 flex items-center justify-center">
+                        <img id="lang-icon" class="w-5 h-5" src="./img/language.svg" alt="Toggle Language">
+                        <span id="lang-text" class="text-xs font-bold ml-1">En</span>
+                    </button>
                     <button id="close-popup" class="bg-transparent border-none text-white cursor-pointer">
-                        <img class="w-5 h-5" src="./img/times.svg" alt="chatbot">
+                        <img class="w-5 h-5" src="./img/times.svg" alt="Close">
                     </button>
                 </div>
             </div>
@@ -33,34 +39,37 @@
             <!-- 聊天內容區 -->
             <div id="chat-messages" class="flex-1 p-4 overflow-y-auto overflow-hidden">
                 <div class="flex flex-col justify-center items-center h-full">
-                    <button class="btn btn-outline text-lg my-2 question h-fit" data-question="忘記員工帳號密碼去哪裡修改？">忘記員工帳號密碼去哪裡修改？</button>
-                    <button class="btn btn-outline text-lg my-2 question h-fit" data-question="如何申請VPN？">如何申請VPN？</button>
-                    <button class="btn btn-outline text-lg my-2 question h-fit" data-question="請問有哪些學術研究計畫可以申請？">請問有哪些學術研究計畫可以申請？</button>
+                    <button class="btn btn-outline text-lg my-2 question h-fit" data-question="忘記員工帳號密碼去哪裡修改？" data-question-en="Where can I reset my employee account password?">忘記員工帳號密碼去哪裡修改？</button>
+                    <button class="btn btn-outline text-lg my-2 question h-fit" data-question="如何申請VPN？" data-question-en="How can I apply for VPN access?">如何申請VPN？</button>
+                    <button class="btn btn-outline text-lg my-2 question h-fit" data-question="請問有哪些學術研究計畫可以申請？" data-question-en="What academic research programs are available for application?">請問有哪些學術研究計畫可以申請？</button>
                     <!-- Gen AI 免責聲明 -->
-                    <div class="text-center text-gray-500 text-xs mt-4">本服務由 AI 回答，可能存在錯誤，僅供參考。</div>
+                    <div id="disclaimer" class="text-center text-gray-500 text-xs mt-4">
+                        本服務由 AI 回答，可能存在錯誤，<br>如有疑問請洽服務台 (02)2789-8855。
+                    </div>
                     <!-- 同意使用條款 -->
-                    <div class="text-center text-gray-500 text-xs mt-1">使用本服務即表示您同意遵守以下使用條款。</div>
+                    <div id="terms" class="text-center text-gray-500 text-xs mt-1">使用本服務即表示您同意遵守以下使用條款。</div>
                     <!-- 個資政策、使用條款 -->
                     <div class="text-center text-gray-500 text-xs mt-1">
-                        <a id="tos-link" target="_blank" class="text-blue-500 underline">使用條款</a> • 
-                        <a id="privacy-policy-link" target="_blank" class="text-blue-500 underline">個資政策</a>
+                        <a id="tos-link" target="_blank" rel="noopener noreferrer" class="text-blue-500 underline">使用條款</a> • 
+                        <a id="privacy-policy-link" target="_blank" rel="noopener noreferrer" class="text-blue-500 underline">個資政策</a>
                     </div>
                 </div>
-                <div class="divider hidden">開始聊天</div>
+                <div id="start-chat" class="divider hidden">開始聊天</div>
             </div>
 
             <!-- 輸入區域 -->
             <div id="chat-input-container" class="p-4 border-t border-gray-200">
                 <div class="flex space-x-4 items-center">
-                    <input type="text" id="chat-input" class="flex-1 border border-gray-300 rounded-md px-4 py-2 outline-none w-3/4 text-gray-700" placeholder="問問小幫手吧... (目前僅一問一答，無記憶功能)">
+                    <input type="text" id="chat-input" class="flex-1 border border-gray-300 rounded-md px-4 py-2 outline-none w-3/4 text-gray-700" placeholder="問問AS萬事通吧... (目前僅一問一答，無記憶功能)">
                     <button id="chat-submit" class="bg-gray-800 text-white text-lg rounded-md px-4 py-2 cursor-pointer">送出</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<!-- 既有 chatbot.js -->
 <script src="./js/chatbot.js"></script>
-<script src="./js/age-verification.js"></script>
+<!-- <script src="./js/age-verification.js"></script> -->
 <script>
     // 定義變數來存儲連結的 URL
     const tosUrl = "tos.html";

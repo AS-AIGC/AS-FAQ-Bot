@@ -163,30 +163,30 @@ YOUR-DIR/
 1. 在第一層目錄建立 `docker-compose.yml`
     
     ```yaml
-    yaml
-    CopyEdit
     services:
-      api:
-        build: ./AS-FAQ-RAG
-        ports:
-        - "4000:8000"
-        env_file:
-        - ./AS-FAQ-RAG/.env
-        volumes:
-        - ./AS-FAQ-RAG:/app
-        working_dir: /app
-        restart: always
-    
-      web:
-        build: ./AS-FAQ-Web-ChatBot
-        tty: true
-        stdin_open: true
-        ports:
-        - "3080:3000"
-        working_dir: /app
-        env_file:
-        - ./AS-FAQ-Web-ChatBot/.env
-        restart: always
+        api:
+            build: ./AS-FAQ-RAG
+            ports:
+            - "4000:8000"
+            environment:
+            - TZ=Asia/Taipei
+            env_file:
+            - ./AS-FAQ-RAG/.env
+            volumes:
+            - ./AS-FAQ-RAG:/app
+            working_dir: /app
+            restart: always
+
+        web:
+            build: ./AS-FAQ-Web-ChatBot
+            ports:
+            - "3080:3000"
+            environment:
+            - TZ=Asia/Taipei
+            working_dir: /app
+            env_file:
+            - ./AS-FAQ-Web-ChatBot/.env
+            restart: always
     
     ```
     
@@ -233,30 +233,33 @@ YOUR-DIR/
 1. Create a file named `docker-compose.yml` in the top-level directory:
     
     ```yaml
-    yaml
-    CopyEdit
     services:
-      api:
-        build: ./AS-FAQ-RAG
-        ports:
-        - "4000:8000"
-        env_file:
-        - ./AS-FAQ-RAG/.env
-        volumes:
-        - ./AS-FAQ-RAG:/app
-        working_dir: /app
-        restart: always
-    
-      web:
-        build: ./AS-FAQ-Web-ChatBot
-        tty: true
-        stdin_open: true
-        ports:
-        - "3080:3000"
-        working_dir: /app
-        env_file:
-        - ./AS-FAQ-Web-ChatBot/.env
-        restart: always
+        api:
+            build: ./AS-FAQ-RAG
+            ports:
+            - "4000:8000"
+            environment:
+            - TZ=Asia/Taipei
+            env_file:
+            - ./AS-FAQ-RAG/.env
+            volumes:
+            - ./AS-FAQ-RAG:/app
+            working_dir: /app
+            restart: always
+
+        web:
+            build: ./AS-FAQ-Web-ChatBot
+            ports:
+            - "3080:3000"
+            environment:
+            - TZ=Asia/Taipei
+            volumes:
+            - ./AS-FAQ-Web-ChatBot:/app
+            - /app/node_modules
+            working_dir: /app
+            env_file:
+            - ./AS-FAQ-Web-ChatBot/.env
+            restart: always
     
     ```
     
@@ -282,6 +285,55 @@ YOUR-DIR/
     
 5. Open your browser at: [http://localhost:3080](http://localhost:3080/)
 
+---
+
+### 更新 Docker compose | Updating Docker Compose
+### 繁體中文
+1. 停止容器
+    
+    ```
+    sudo docker compose down
+    ```
+    
+2. 更新程式碼 (git)
+    
+    ```
+    git pull
+    ```
+    
+3. 建立新映像
+    
+    ```
+    sudo docker compose build --no-cache
+    ```
+    
+4. 啟動容器
+    
+    ```
+    sudo docker compose up -d
+    ```
+
+### English
+1. Stop the containers:
+    
+    ```
+    sudo docker compose down
+    ```
+2. Update the code (git):
+    
+    ```
+    git pull
+    ```
+3. Build new images:
+    
+    ```
+    sudo docker compose build --no-cache
+    ```
+4. Start the containers:
+    
+    ```
+    sudo docker compose up -d
+    ```
 ---
 
 ## 編輯使用條款及個資政策網頁 / Editing Terms of Service & Privacy Policy Pages

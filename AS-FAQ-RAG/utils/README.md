@@ -4,7 +4,7 @@ A powerful vector search-based Question Answering system that combines FAISS sim
 
 ## Features
 
-- Multiple LLM provider support (Gemini, OpenAI, Groq, Ollama)
+- Multiple LLM provider support (Gemini, OpenAI, Groq, Ollama, Open WebUI)
 - Vector-based semantic search using FAISS
 - Multilingual support with Chinese-to-English translation
 - Configurable context retrieval
@@ -46,6 +46,7 @@ GOOGLE_API_KEY=your-google-api-key
 OPENAI_API_KEY=your-openai-api-key
 GROQ_API_KEY=your-groq-api-key
 OLLAMA_BASE_URL=http://localhost:11434  # Default for local Ollama
+WEBUI_BASE_URL=http://localhost:8000  # Default for local Open WebUI
 ```
 
 ## System Configuration
@@ -165,4 +166,4 @@ logging.basicConfig(
 
 - FAISS by Facebook Research
 - Sentence Transformers by UKPLab
-- Various LLM providers (Google, OpenAI, Groq, Ollama)
+- Various LLM providers (Google, OpenAI, Groq, Ollama, Open WebUI)

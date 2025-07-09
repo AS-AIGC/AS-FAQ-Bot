@@ -3,6 +3,8 @@ services:
     build: .
     ports:
       - "4000:8000"
+    environment:
+      - TZ=Asia/Taipei
     env_file:
       - .env
     volumes:

@@ -1,15 +1,11 @@
 import os
-import asyncio
 import pandas as pd
-import requests
 import logging
-from openai import OpenAI
-from groq import Groq
-from googletrans import Translator
+import subprocess
 
 # 設定資料來源目錄與輸出檔案名稱
-DATA_DIR = './FAQ-data'
-OUTPUT_FILE = './combined_context_en.csv'
+DATA_DIR = os.path.abspath('./FAQ_data')
+OUTPUT_FILE = os.path.abspath('./combined_context_en.csv')
 
 # 設定 logging
 logging.basicConfig(
@@ -21,157 +17,153 @@ logging.basicConfig(
 def download_github_repo():
     # 從 github 下載原始資料
     repo_url = os.getenv("REPO_URL")
+
     if not os.path.exists(DATA_DIR):
-        logging.info(f"資料夾 {DATA_DIR} 不存在，正在建立")
+        # 如果資料夾不存在，則建立資料夾
         os.makedirs(DATA_DIR)
-
-    # 如果資料夾為空，則 clone repo
+        logging.info(f"Created directory: {DATA_DIR}")
+        
     if not os.listdir(DATA_DIR):
-        os.system(f"git clone {repo_url} {DATA_DIR}")
+        # 如果資料夾為空，則 clone repo
+        logging.info(f"Folder {DATA_DIR} is empty, cloning repository")
+        subprocess.run(['git', 'clone', repo_url, DATA_DIR], check=True)
+    elif not os.path.exists(os.path.join(DATA_DIR, '.git')):
+        # 檢查是否為 git repo，如果不是，則重新 clone
+        logging.info(f"Folder {DATA_DIR} is not a git repository, re-cloning")
+        import shutil
+        shutil.rmtree(DATA_DIR)
+        os.makedirs(DATA_DIR)
+        subprocess.run(['git', 'clone', repo_url, DATA_DIR], check=True)
     else:
-        # 檢查git status 如果有變更，則嘗試更新 repo
-        logging.info(f"資料夾 {DATA_DIR} 已存在，檢查是否有更新...")
-        os.system(f"cd {DATA_DIR} && git fetch")
-        git_status = os.popen(f"git status").read()
-        if "Your branch is up to date" not in git_status:
-            logging.info(f"資料夾 {DATA_DIR} 已存在且有更新，嘗試更新 repo。")
-            os.system(f"git reset --hard origin/main")
-        else:
-            logging.info(f"資料夾 {DATA_DIR} 已存在且無更新。")
-
-# LLM 翻譯
-def llm_translate_text(text) -> str:
-    
-    translate_api = os.getenv("TRANSLATE_API", "OLLAMA")  # Default to ollama if not specified
-
-    prompt = f"""
-            Task: Translate the following Chinese text to English.
-            Maintain the original meaning and context while ensuring natural English expression.
-            Only reply with the translated English text.
-            
-            Chinese text: {text}
-            
-            Translated English text:
-        """
-    
-    try:
-        if translate_api == "OLLAMA":
-            # 使用 OLLAMA API
-            ollama_base_url = os.getenv("OLLAMA_BASE_URL")
-            response = requests.post(
-                f"{ollama_base_url}/api/generate",
-                json={
-                    "model": os.getenv("OLLAMA_MODEL"),
-                    "prompt": prompt,
-                    "stream": False,
-                    "options": {
-                        "num_ctx": 8192
-                    }
-                }
-            )
-        elif translate_api == "WEBUI" or translate_api == "OPENAI":
-            # 使用 WebUI 或 OpenAI API
-            openai_base_url = os.getenv("OPENAI_BASE_URL")
-            client = OpenAI(
-                api_key=os.getenv("OPENAI_API_KEY"),
-                base_url=openai_base_url
-            )
-            completion = client.chat.completions.create(
-                model=os.getenv("OPENAI_MODEL"),
-                messages=[
-                    {"role": "system", "content": prompt}
-                ],
-            )
-            response = completion.choices[0].message.content
-        elif translate_api == "GROQ":
-            # 使用 GROQ API
-            client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-            completion = client.chat.completions.create(
-                model=os.getenv("GROQ_MODEL"),
-                messages=[
-                    {"role": "user", "content": prompt}
-                ]
-            )
-            response = completion.choices[0].message.content
-        else:
-            logging.error("無效的翻譯選擇")
-            return ""
+        # 嘗試更新 repo
+        logging.info(f"Folder {DATA_DIR} already exists, attempting to update repo")
+        original_dir = os.getcwd()
+        os.chdir(DATA_DIR)
         
-        # DEBUG
-        if translate_api == "OLLAMA":
-            response.raise_for_status()
-            logging.info("---------------------\n翻譯結果: %s\n---------------------\n", response.json()["response"])
-        else:
-            logging.info("---------------------\n翻譯結果: %s\n---------------------\n", response)
-
-        if translate_api == "OLLAMA":
-            response.raise_for_status()
-            return response.json()["response"]
-        else:
-            return response
+        # 確保 remote 已設定
+        try:
+            # 檢查 remote 是否存在
+            remote_check = subprocess.run(['git', 'remote', '-v'], capture_output=True, text=True)
+            if 'origin' not in remote_check.stdout:
+                logging.info("Setting up git remote")
+                subprocess.run(['git', 'remote', 'add', 'origin', repo_url], check=True)
+            
+            # 獲取所有分支
+            subprocess.run(['git', 'fetch', '--all'], check=True)
+            
+            # 重設到最新狀態
+            subprocess.run(['git', 'reset', '--hard', 'origin/main'], check=True)
+        except subprocess.CalledProcessError as e:
+            logging.error(f"Git operation failed: {str(e)}, re-cloning repository")
+            # 如果失敗，嘗試重新 clone
+            os.chdir(original_dir)
+            import shutil
+            shutil.rmtree(DATA_DIR)
+            os.makedirs(DATA_DIR)
+            subprocess.run(['git', 'clone', repo_url, DATA_DIR], check=True)
         
-    except requests.RequestException as e:
-        logging.error("翻譯錯誤:", e)
-        return ""
+            # 切回原始目錄
+            os.chdir(original_dir)
 
-# check text length
-def check_text_length(text, max_char=15000) -> int:
-    if not isinstance(text, str):
-        return 0
-    text_length = len(text)
-    if text_length > max_char:
-        return -1
-    return text_length
-
-# Google 翻譯
-async def google_translate_text(text, src='zh-tw',dest='en'):
-    """以google翻譯將text翻譯為目標語言
-
-    :param text: 要翻譯的字串，接受UTF-8編碼。
-    :param dest: 要翻譯的目標語言，參閱googletrans.LANGCODES語言列表。
+# 檢查 Git 儲存庫是否需要更新
+def check_git_updates():
     """
-    # check text length
-    max_char = 10000 # https://github.com/ssut/py-googletrans 限制為 15000 字，這裡設定為 10000 字
-    if check_text_length(text, max_char) <= 0:
-        logging.warning("字串長度超過 %s 字或不是字串: %s", max_char, text)
-        return f"<Error: Text length exceeds {max_char} characters or is not a string.>"
-
-    async with Translator() as translator:
-        result = await translator.translate(text, dest=dest, src=src)
-        logging.info("---------------------\n翻譯結果: %s\n---------------------\n", result.text)
-        return result.text
+    檢查 Git 儲存庫是否需要更新
+    
+    Returns:
+        bool: 如果需要更新則返回 True，否則返回 False
+    """
+    try:
+        # 檢查資料夾是否存在
+        if not os.path.exists(DATA_DIR):
+            logging.info(f"Repository directory {DATA_DIR} does not exist, will clone")
+            return True
+            
+        # 檢查是否為 git 儲存庫
+        if not os.path.exists(os.path.join(DATA_DIR, '.git')):
+            logging.info(f"Directory {DATA_DIR} is not a git repository, will re-clone")
+            return True
+            
+        # 切換到儲存庫目錄
+        original_dir = os.getcwd()
+        os.chdir(DATA_DIR)
+        
+        try:
+            # 確保 remote 已設定
+            remote_check = subprocess.run(['git', 'remote', '-v'], capture_output=True, text=True)
+            if 'origin' not in remote_check.stdout:
+                logging.info("Remote not set, update needed")
+                os.chdir(original_dir)
+                return True
+                
+            # 取得最新變更
+            logging.info("Fetching latest changes from remote repository...")
+            subprocess.run(['git', 'fetch', '--all'], check=True)
+            
+            # 獲取本地 HEAD 的 commit hash
+            local_hash = subprocess.run(
+                ['git', 'rev-parse', 'HEAD'], 
+                capture_output=True, 
+                text=True, 
+                check=True
+            ).stdout.strip()
+            
+            # 獲取遠端 origin/main 的 commit hash
+            remote_hash = subprocess.run(
+                ['git', 'ls-remote', 'origin', 'main'], 
+                capture_output=True, 
+                text=True, 
+                check=True
+            ).stdout.strip().split()[0]
+            
+            # 切換回原始目錄
+            os.chdir(original_dir)
+            
+            # 比較 hash 值
+            if local_hash != remote_hash:
+                logging.info(f"Repository has updates: local {local_hash[:7]} vs remote {remote_hash[:7]}")
+                return True
+            else:
+                logging.info("No updates found in repository")
+                return False
+                
+        except subprocess.CalledProcessError as e:
+            logging.error(f"Git command execution failed: {str(e)}")
+            os.chdir(original_dir)
+            return True
+            
+    except Exception as e:
+        logging.error(f"Error checking git updates: {str(e)}")
+        # 如果出錯，為安全起見，假設需要更新
+        return True
 
 # 處理單一 CSV 檔案
 def process_csv_file(file_path):
     df = pd.read_csv(file_path)
-    if os.getenv("TRANSLATE_API") == "GOOGLE":
-        # 假設原有欄位包含: contact, context, category, url, title
-        # 新增翻譯結果欄位
-        df['en_title'] = df['title'].apply(lambda x: asyncio.run(google_translate_text(x)))
-        df['en_context'] = df['context'].apply(lambda x: asyncio.run(google_translate_text(x)))
-    else:
-        df['en_title'] = df['title'].apply(lambda x: llm_translate_text(x))
-        df['en_context'] = df['context'].apply(lambda x: llm_translate_text(x))
     return df
 
 # 合併所有 CSV 檔案並輸出結果
 def combine_csv_files():
-    SOURCE_DIR = DATA_DIR + '/data/source'
+    # 設定源文件目錄
+    SOURCE_DIR = os.path.join(DATA_DIR, 'data/source')
+    
     combined_df = pd.DataFrame()
     for file_name in os.listdir(SOURCE_DIR):
         if file_name.endswith('.csv'):
             file_path = os.path.join(SOURCE_DIR, file_name)
-            logging.info("處理檔案: %s", file_path)
+            logging.info("Processing file: %s", file_path)
             df = process_csv_file(file_path)
             combined_df = pd.concat([combined_df, df], ignore_index=True)
     # 調整欄位順序
-    columns_order = ['contact', 'context', 'category', 'url', 'title', 'en_title', 'en_context']
+    columns_order = ['contact', 'context', 'category', 'url', 'title']
     combined_df = combined_df[columns_order]
     combined_df.to_csv(OUTPUT_FILE, index=False)
-    logging.info("合併後的 CSV 已輸出: %s", OUTPUT_FILE)
+    logging.info("Combined CSV file saved to %s", OUTPUT_FILE)
 
 if __name__ == "__main__":
-    # 下載資料
-    download_github_repo()
+    # 檢查 Git 儲存庫是否有更新
+    if check_git_updates():
+        # 下載資料
+        download_github_repo()
     # 合併 CSV 檔案
     combine_csv_files()

@@ -61,7 +61,7 @@ AS-FAQ-RAG is an FAQ system based on RAG (Retrieval-Augmented Generation) techno
     
     ```
     
-    `REPO_URL`、`TRANSLATE_API` 為資料彙整程式 (`update_data.py`) 使用，如果沒有要用到資料彙整的功能可以不填。
+    `REPO_URL` 為資料彙整程式 (`update_data.py`) 使用，如果沒有要用到資料彙整的功能可以不填。
     
 5. 匯入 QA 資料
     
@@ -120,7 +120,7 @@ AS-FAQ-RAG is an FAQ system based on RAG (Retrieval-Augmented Generation) techno
     
     ```
     
-    `REPO_URL` and `TRANSLATE_API` are used by the data aggregation script (`update_data.py`). If you do not need data aggregation functionality, you can leave them empty.
+    `REPO_URL` is used by the data aggregation script (`update_data.py`). If you do not need data aggregation functionality, you can leave them empty.
     
 5. Import QA data
     
@@ -145,7 +145,7 @@ AS-FAQ-RAG is an FAQ system based on RAG (Retrieval-Augmented Generation) techno
 > [!TIP]
 > For a production environment, remove the `--reload` flag to prevent high CPU usage.
 
-7. **On first startup**, wait for `vector_database.bin` to be created.
+7. On first startup, wait for `vector_database.bin` to be created.
 
 ---
 
@@ -161,7 +161,7 @@ AS-FAQ-RAG is an FAQ system based on RAG (Retrieval-Augmented Generation) techno
     
     ```
     
-    REPO_URL、TRANSLATE_API 為資料彙整程式 (`update_data.py`) 使用，如果沒有要用到資料彙整的功能可以不填。
+    REPO_URL 為資料彙整程式 (`update_data.py`) 使用，如果沒有要用到資料彙整的功能可以不填。
     
 2. 匯入 QA 資料
     
@@ -173,15 +173,21 @@ AS-FAQ-RAG is an FAQ system based on RAG (Retrieval-Augmented Generation) techno
     cp combined_context_en.csv.example combined_context_en.csv
     
     ```
+
+3. 確保 start.sh 腳本有執行權限
     
-3. 啟動
+    ```bash
+    chmod +x start.sh
+    ```
+    
+4. 啟動
     
     ```bash
     sudo docker compose up -d
     
     ```
     
-4. 初次啟動需等待 `vector_database.bin` 建立。
+5. 初次啟動需等待 `vector_database.bin` 建立。
 
 ### English
 
@@ -193,12 +199,12 @@ AS-FAQ-RAG is an FAQ system based on RAG (Retrieval-Augmented Generation) techno
     
     ```
     
-    `REPO_URL` and `TRANSLATE_API` are used by the data aggregation script (`update_data.py`). If you do not need data aggregation functionality, you can leave them empty.
+    `REPO_URL` is used by the data aggregation script (`update_data.py`). If you do not need data aggregation functionality, you can leave them empty.
     
 2. Import QA data
     
     Refer to `combined_context_en.csv.example` for the QA data format,
-    
+
     then save your edited file as `combined_context_en.csv`:
     
     ```bash
@@ -206,20 +212,24 @@ AS-FAQ-RAG is an FAQ system based on RAG (Retrieval-Augmented Generation) techno
     
     ```
     
-3. Start the service:
+3. Ensure the start.sh script has execution permissions
+    
+    ```bash
+    chmod +x start.sh
+    ```
+    
+4. Start the service:
     
     ```bash
     sudo docker compose up -d
     
     ```
     
-4. On first startup, wait for `vector_database.bin` to be created.
+5. On first startup, wait for `vector_database.bin` to be created.
 
 ---
 
-### Docker compose 同時安裝 Web 及 API
-
-### Docker Compose to Install Both Web and API
+### Docker compose 同時安裝 Web 及 API | Docker Compose to Install Both Web and API
 
 ### 繁體中文
 
@@ -243,27 +253,32 @@ YOUR-DIR/
     
     ```yaml
     services:
-      api:
-        build: ./AS-FAQ-RAG
-        ports:
-        - "4000:8000"
-        env_file:
-        - ./AS-FAQ-RAG/.env
-        volumes:
-        - ./AS-FAQ-RAG:/app
-        working_dir: /app
-        restart: always
-    
-      web:
-        build: ./AS-FAQ-Web-ChatBot
-        tty: true
-        stdin_open: true
-        ports:
-        - "3080:3000"
-        working_dir: /app
-        env_file:
-        - ./AS-FAQ-Web-ChatBot/.env
-        restart: always
+        api:
+            build: ./AS-FAQ-RAG
+            ports:
+            - "4000:8000"
+            environment:
+            - TZ=Asia/Taipei
+            env_file:
+            - ./AS-FAQ-RAG/.env
+            volumes:
+            - ./AS-FAQ-RAG:/app
+            working_dir: /app
+            restart: always
+
+        web:
+            build: ./AS-FAQ-Web-ChatBot
+            ports:
+            - "3080:3000"
+            environment:
+            - TZ=Asia/Taipei
+            volumes:
+            - ./AS-FAQ-Web-ChatBot:/app
+            - /app/node_modules
+            working_dir: /app
+            env_file:
+            - ./AS-FAQ-Web-ChatBot/.env
+            restart: always
     
     ```
     
@@ -276,7 +291,7 @@ YOUR-DIR/
     
     ```
     
-    REPO_URL、TRANSLATE_API 為資料彙整程式 (`update_data.py`) 使用，如果沒有要用到資料彙整的功能可以不填。
+    REPO_URL 為資料彙整程式 (`update_data.py`) 使用，如果沒有要用到資料彙整的功能可以不填。
     
 3. 匯入 QA 資料
     
@@ -321,27 +336,32 @@ YOUR-DIR/
     
     ```yaml
     services:
-      api:
-        build: ./AS-FAQ-RAG
-        ports:
-        - "4000:8000"
-        env_file:
-        - ./AS-FAQ-RAG/.env
-        volumes:
-        - ./AS-FAQ-RAG:/app
-        working_dir: /app
-        restart: always
-    
-      web:
-        build: ./AS-FAQ-Web-ChatBot
-        tty: true
-        stdin_open: true
-        ports:
-        - "3080:3000"
-        working_dir: /app
-        env_file:
-        - ./AS-FAQ-Web-ChatBot/.env
-        restart: always
+        api:
+            build: ./AS-FAQ-RAG
+            ports:
+            - "4000:8000"
+            environment:
+            - TZ=Asia/Taipei
+            env_file:
+            - ./AS-FAQ-RAG/.env
+            volumes:
+            - ./AS-FAQ-RAG:/app
+            working_dir: /app
+            restart: always
+
+        web:
+            build: ./AS-FAQ-Web-ChatBot
+            ports:
+            - "3080:3000"
+            environment:
+            - TZ=Asia/Taipei
+            volumes:
+            - ./AS-FAQ-Web-ChatBot:/app
+            - /app/node_modules
+            working_dir: /app
+            env_file:
+            - ./AS-FAQ-Web-ChatBot/.env
+            restart: always
     
     ```
     
@@ -354,7 +374,7 @@ YOUR-DIR/
     
     ```
     
-    `REPO_URL` and `TRANSLATE_API` are used by the data aggregation script (`update_data.py`). If you do not need data aggregation functionality, you can leave them empty.
+    `REPO_URL` is used by the data aggregation script (`update_data.py`). If you do not need data aggregation functionality, you can leave them empty.
     
 3. Import QA data
     
@@ -377,6 +397,55 @@ YOUR-DIR/
     ```
     
 
+---
+
+### 更新 Docker compose | Updating Docker Compose
+### 繁體中文
+1. 停止容器
+    
+    ```
+    sudo docker compose down
+    ```
+    
+2. 更新程式碼 (git)
+    
+    ```
+    git pull
+    ```
+    
+3. 建立新映像
+    
+    ```
+    sudo docker compose build --no-cache
+    ```
+    
+4. 啟動容器
+    
+    ```
+    sudo docker compose up -d
+    ```
+
+### English
+1. Stop the containers:
+    
+    ```
+    sudo docker compose down
+    ```
+2. Update the code (git):
+    
+    ```
+    git pull
+    ```
+3. Build new images:
+    
+    ```
+    sudo docker compose build --no-cache
+    ```
+4. Start the containers:
+    
+    ```
+    sudo docker compose up -d
+    ```
 ---
 
 ## 匯入 QA 資料 | Importing QA Data
@@ -441,6 +510,45 @@ For individual CSV format, please refer to [AS-FAQ-Bot](https://github.com/AS-AI
 
 ---
 
+## 啟用或停用自動更新 | Enable or Disable Auto Update
+
+**繁體中文**  
+本專案支援兩種方式控制自動更新功能：
+
+1. **啟動參數**  
+   - 啟用自動更新：  
+     ```bash
+     ./start.sh --auto-update
+     ```
+
+2. **環境變數**  
+   - 在啟動前設定 `ENABLE_AUTO_UPDATE_ENV=1` 可啟用自動更新：  
+     ```bash
+     ENABLE_AUTO_UPDATE_ENV=1 ./start.sh
+     ```
+   - 若未設定參數且未設定環境變數，則預設不啟用自動更新。
+
+> 註：若同時設定參數與環境變數，**以參數為主**。
+
+### English
+This project supports two ways to control the auto update feature:
+
+1. **Command-line Argument**  
+   - Enable auto update:  
+     ```bash
+     ./start.sh --auto-update
+     ```
+
+2. **Environment Variable**  
+   - Set `ENABLE_AUTO_UPDATE_ENV=1` before starting to enable auto update:  
+     ```bash
+     ENABLE_AUTO_UPDATE_ENV=1 ./start.sh
+     ```
+   - If neither argument nor environment variable is set, auto update is disabled by default.
+
+> Note: If both argument and environment variable are set, **the argument takes precedence**.
+---
+
 ## 更新資料庫 | Updating the Database
 
 ### 繁體中文
@@ -463,11 +571,21 @@ For individual CSV format, please refer to [AS-FAQ-Bot](https://github.com/AS-AI
 
 ### 繁體中文
 
-可於 `utils/respond.py` 設定 RAG 參數，包含搜尋文件數及提示詞。
+### 繁體中文
+
+可於 `utils/respond.py` 設定 RAG 參數，包含搜尋文件數。
+
+若要修改系統使用的提示詞，您可以編輯 `utils/prompts.yaml` 檔案。 這個檔案包含用於不同任務的提示詞，例如回答問題、翻譯文本和檢測語言。 此外，還提供了一個範例檔案 `utils/prompts.yaml.example`，其中包含簡化的提示詞，供測試使用。 您可以將此檔案複製到 `utils/prompts.yaml` 以使用範例提示詞。
+
+請手動刪除 `utils/prompts.py` 和 `utils/prompts.py.example` 檔案。
 
 ### English
 
-You can configure RAG parameters in `utils/respond.py`, including the number of documents to search and prompt settings.
+You can configure RAG parameters in `utils/respond.py`, including the number of documents to search.
+
+To modify the prompts used by the system, you can edit the `utils/prompts.yaml` file. This file contains the prompts used for different tasks, such as answering questions, translating text, and detecting languages. An example file `utils/prompts.yaml.example` is also provided, which contains simplified prompts for testing purposes. You can copy this file to `utils/prompts.yaml` to use the example prompts.
+
+Please manually delete `utils/prompts.py` and `utils/prompts.py.example` files.
 
 ---
 
@@ -515,12 +633,3 @@ curl --location 'http://127.0.0.1:8000/ask' \
 **English**  
 
 The original version of this project was authored by Mr. [Kang-Syuan Peng](https://github.com/MKE0108) during his internship as a research assistant the Institute of Information Science, Academia Sinica (2024/10). We would like to express our gratitude.
-
-
-
-
-
-
-
-
-

@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
-from typing import Generator
+from typing import AsyncGenerator
 import json
 import logging
 from utils.respond import SearchQASystem, CONFIG, LLMProvider
@@ -27,24 +27,24 @@ app.add_middleware(
 # Initialize the Search and QA System
 qa_system = SearchQASystem()
 
-def stream_response(query: str) -> Generator[str, None, None]:
+async def stream_response(query: str) -> AsyncGenerator[str, None]:
     """
-    Generator function to stream the response.
+    Async generator function to stream the response.
     
     Args:
-        query: User's question in Chinese.
+        query: User's question.
         
     Yields:
         Chunks of the generated response.
     """
     try:
-        answer, sources = qa_system.search_and_answer(query)
+        answer, sources = await qa_system.search_and_answer(query)
         # print(f"User Question: {query}")
         # print(f"AI Answer: {answer}")
         yield json.dumps({"answer": answer, "sources": sources})
     except Exception as e:
         # Log the error on the server
-        logging.error("An error occurred: %s", str(e))
+        logger.error("An error occurred: %s", str(e))
         # Return an error response to the client
         yield json.dumps({"error": "An internal error has occurred!"})
         raise HTTPException(status_code=500, detail="Internal Server Error")
@@ -67,3 +67,23 @@ async def ask_question(request: Request):
         return {"error": "Question not provided"}
     
     return StreamingResponse(stream_response(query), media_type="application/json")
+
+@app.get("/api/rag/embedding-info")
+def get_embedding_info():
+    """
+    API endpoint to get the current embedding model information.
+    
+    Returns:
+        dict: A dictionary containing the embedding model name.
+    """
+    return {"embedding_model": CONFIG["VECTOR_MODEL"]}
+
+@app.get("/api/rag/llm-info")
+def get_llm_info():
+    """
+    API endpoint to get the current LLM provider information.
+    
+    Returns:
+        dict: A dictionary containing the LLM provider name.
+    """
+    return {"llm_provider": CONFIG["DEFAULT_LLM_PROVIDER"].value}

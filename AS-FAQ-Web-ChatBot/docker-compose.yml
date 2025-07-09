@@ -1,13 +1,13 @@
 services:
   web:
     build: .
-    tty: true
-    stdin_open: true
     ports:
       - "3080:3000"
-    volumes:
-      - .:/app
-      - /app/node_modules
+    environment:
+      - TZ=Asia/Taipei
+    #volumes:
+      #- .:/app
+      #- /app/node_modules
     env_file:
       - .env
     restart: always
