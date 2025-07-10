@@ -9,4 +9,5 @@ services:
       - .env
     volumes:
       - .:/app
+      - ./hf_cache:/app/hf_cache
     restart: always

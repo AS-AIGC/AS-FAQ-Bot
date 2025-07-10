@@ -128,3 +128,6 @@ vector_database.bin
 # FAQ Data
 FAQ_data/
 utils/prompts.yaml
+
+# Hugging Face cache
+hf_cache/

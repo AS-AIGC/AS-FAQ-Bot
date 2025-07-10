@@ -108,6 +108,10 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# 全域 embedding model 及 lock
+_GLOBAL_ST_MODEL = None
+_GLOBAL_ST_MODEL_LOCK = threading.Lock()
+
 class LLMService:
     """Service class for handling different LLM providers"""
     
@@ -276,13 +280,21 @@ class SearchQASystem:
             raise
 
     def _initialize_models(self) -> None:
-        """Initialize required models"""
-        try:
-            self.st_model = SentenceTransformer(CONFIG["VECTOR_MODEL"])
-            logger.info("Successfully initialized Sentence Transformer model")
-        except Exception as e:
-            logger.error(f"Error initializing models: {str(e)}")
-            raise
+        """Initialize required models (singleton)"""
+        global _GLOBAL_ST_MODEL
+        if _GLOBAL_ST_MODEL is not None:
+            self.st_model = _GLOBAL_ST_MODEL
+            logger.info("Reusing global Sentence Transformer model")
+            return
+        with _GLOBAL_ST_MODEL_LOCK:
+            if _GLOBAL_ST_MODEL is None:
+                try:
+                    _GLOBAL_ST_MODEL = SentenceTransformer(CONFIG["VECTOR_MODEL"])
+                    logger.info("Successfully initialized global Sentence Transformer model")
+                except Exception as e:
+                    logger.error(f"Error initializing models: {str(e)}")
+                    raise
+            self.st_model = _GLOBAL_ST_MODEL
 
     def _setup_vector_database(self) -> None:
         """Set up or load vector database"""
@@ -304,6 +316,11 @@ class SearchQASystem:
 
     def _create_vector_database(self) -> None:
         """Create new vector database"""
+        # 確保模型已初始化
+        if self.st_model is None:
+            logger.info("模型尚未初始化，正在初始化模型...")
+            self._initialize_models()
+
         texts = [f"{d['title']}\n{d['context']}" for d in self.data]
         embeddings = self.st_model.encode(texts)
         
@@ -319,6 +336,10 @@ class SearchQASystem:
         """
         try:
             logger.info("定時重建向量資料庫任務啟動")
+            # 確保模型已初始化
+            if self.st_model is None:
+                logger.info("模型尚未初始化，正在初始化模型...")
+                self._initialize_models()
             # 重新讀取最新資料
             self._load_data()
             # 重新建立向量資料庫（此處可依需求選擇只更新向量資料庫，而不重新載入模型）
@@ -433,6 +454,11 @@ class SearchQASystem:
         Returns:
             List of relevant texts
         """
+        # 確保模型已初始化
+        if self.st_model is None:
+            logger.info("模型尚未初始化，正在初始化模型...")
+            self._initialize_models()
+        
         query_vector = self.st_model.encode([query])
         distances, indices = self.index.search(
             query_vector.astype('float32'),

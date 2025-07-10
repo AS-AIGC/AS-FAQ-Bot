@@ -547,6 +547,52 @@ This project supports two ways to control the auto update feature:
    - If neither argument nor environment variable is set, auto update is disabled by default.
 
 > Note: If both argument and environment variable are set, **the argument takes precedence**.
+
+---
+
+## 自訂埠號 | Custom Port
+
+**繁體中文**  
+您可以使用 `--port=<埠號>` 參數來自訂 API 服務的埠號：
+
+```bash
+# 使用自訂埠號 3000
+./start.sh --port=3000
+
+# 同時啟用自動更新和自訂埠號
+./start.sh --auto-update --port=3000
+```
+
+**Windows 使用者**可以使用 `start.bat`：
+
+```batch
+REM 使用自訂埠號 3000
+start.bat --port=3000
+
+REM 同時啟用自動更新和自訂埠號
+start.bat --auto-update --port=3000
+```
+
+### English
+You can use the `--port=<port>` parameter to customize the API service port:
+
+```bash
+# Use custom port 3000
+./start.sh --port=3000
+
+# Enable auto update and custom port
+./start.sh --auto-update --port=3000
+```
+
+**Windows users** can use `start.bat`:
+
+```batch
+REM Use custom port 3000
+start.bat --port=3000
+
+REM Enable auto update and custom port
+start.bat --auto-update --port=3000
+```
 ---
 
 ## 更新資料庫 | Updating the Database
