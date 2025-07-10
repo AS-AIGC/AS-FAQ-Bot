@@ -7,6 +7,14 @@ LANGUAGE_DETECTION_PROMPT: |
     If the text is Chinese, reply "台灣繁體中文". If the text is in any other language, reply "english".
     Only reply with the language code.
 
-QA_PROMPT: "Answer the question: {query}"
+QA_PROMPT: |
+    這是和這個問題可能相關的背景知識
+    {context}
 
-QA_PROMPT_EN: "Answer the question: {query}"
+    使用者的問題: {query}，以 {lang} 回覆
+
+QA_PROMPT_EN: |
+    Background Knowledge: This is background knowledge that may be related to this question.
+    {context}
+
+    USER's QUESTION: "{query}" , response in {lang}

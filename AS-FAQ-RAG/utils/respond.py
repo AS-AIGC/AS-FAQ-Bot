@@ -18,9 +18,10 @@ except Exception as e:
     print(f"Error loading prompts from YAML: {e}")
     SYSTEM_PROMPT = "You are a helpful assistant."
     TRANSLATION_PROMPT = "Translate to English: {text}"
-    LANGUAGE_DETECTION_PROMPT = "Detect the language: {query}"
-    QA_PROMPT = "Answer the question: {query}"
-    QA_PROMPT_EN = "Answer the question: {query}"
+    LANGUAGE_DETECTION_PROMPT = "Task: Detect the language of the following text: {query} If the text is Chinese, reply '台灣繁體中文'. If the text is in any other language, reply 'english'. Only reply with the language code."
+    QA_PROMPT = "這是和這個問題可能相關的背景知識: {context} 使用者的問題: {query}，以 {lang} 回覆"
+    QA_PROMPT_EN = "Background Knowledge: {context} USER's QUESTION: {query} , response in {lang}"
+
 import os
 import csv
 import logging
