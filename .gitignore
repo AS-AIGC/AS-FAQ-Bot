@@ -6,3 +6,6 @@ __pycache__/*
 
 # VS Code settings
 .vscode/
+
+# Except start.sh
+!start.sh
