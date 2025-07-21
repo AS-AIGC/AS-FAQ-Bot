@@ -11,3 +11,4 @@ pandas
 googletrans>=4.0.2
 schedule
 pyyaml
+dotenv
