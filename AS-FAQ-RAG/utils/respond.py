@@ -23,6 +23,7 @@ except Exception as e:
     QA_PROMPT_EN = "Background Knowledge: {context} USER's QUESTION: {query} , response in {lang}"
 
 import os
+from dotenv import load_dotenv
 import csv
 import logging
 import time
@@ -69,6 +70,7 @@ def get_llm_provider(provider_str: str) -> LLMProvider:
     return provider_map.get(provider_str.lower(), LLMProvider.OLLAMA)
 
 # Global Variables
+load_dotenv(dotenv_path=os.path.join(os.getcwd(), ".env"))
 CONFIG = {
     # File Paths
     "CSV_PATH": "combined_context_en.csv",
