@@ -272,9 +272,6 @@ YOUR-DIR/
             - "3080:3000"
             environment:
             - TZ=Asia/Taipei
-            volumes:
-            - ./AS-FAQ-Web-ChatBot:/app
-            - /app/node_modules
             working_dir: /app
             env_file:
             - ./AS-FAQ-Web-ChatBot/.env
@@ -355,9 +352,6 @@ YOUR-DIR/
             - "3080:3000"
             environment:
             - TZ=Asia/Taipei
-            volumes:
-            - ./AS-FAQ-Web-ChatBot:/app
-            - /app/node_modules
             working_dir: /app
             env_file:
             - ./AS-FAQ-Web-ChatBot/.env
