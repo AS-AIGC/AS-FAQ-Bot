@@ -174,6 +174,7 @@ YOUR-DIR/
             - ./AS-FAQ-RAG/.env
             volumes:
             - ./AS-FAQ-RAG:/app
+            - ./hf_cache:/app/hf_cache
             working_dir: /app
             restart: always
 
@@ -244,6 +245,7 @@ YOUR-DIR/
             - ./AS-FAQ-RAG/.env
             volumes:
             - ./AS-FAQ-RAG:/app
+            - ./hf_cache:/app/hf_cache
             working_dir: /app
             restart: always
 
