@@ -5101,13 +5101,6 @@ url: https://www.sinica.edu.tw/Tab/194/2
 contact: aspublic@gate.sinica.edu.tw
 
 
-category: 中央研究院
-title: 歷屆院長歷任院長
-context: 歷屆院長    蔡元培（1928－1940）：創院院長    朱家驊（1940－1957）    胡適（1957－1962）：台灣復院後首任院長    吳大猷（1962－1970）    沈剛伯（1970－1981）    吳大猷（代理）（1981－1983）    李遠哲（1994－2006）：諾貝爾化學獎得主    翁啟惠（2006－2016）    廖俊智（2016－迄今）Presidents of Academia Sinica    Cai Yuanpei (1928–1940): Founding president    Chu Chia-hua (1940–1957)    Hu Shih (1957–1962): First president after reestablishment in Taiwan    Wu Ta-You (1962–1970)    Shen Kang-Po (1970–1981)    Wu Ta-You (Acting) (1981–1983)    Yuan T. Lee (1994–2006): Nobel Laureate in Chemistry    Chi-Huey Wong (2006–2016)    James C. Liao (2016–present)
-url: https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%A4%AE%E7%A0%94%E7%A9%B6%E9%99%A2
-contact: aspublic@gate.sinica.edu.tw
-
-
 category: 科普活動
 title: 中研講堂──跨縣市科普演講
 context: 中研院自107年起舉辦「中研講堂──跨縣市科普演講」，以利外縣市學子可聆聽中研院研究演講，不受交通、城鄉差距等因素影響。「中研講堂──跨縣市科普演講」，由院內研究人員向民眾分享研究成果。目前已造訪12個縣市，各場次平均報名達300人、演講影片最高觀看次數逾 14萬次。未來，中研院將持續規劃舉辦，並優先考量於未造訪過之縣市舉行。
