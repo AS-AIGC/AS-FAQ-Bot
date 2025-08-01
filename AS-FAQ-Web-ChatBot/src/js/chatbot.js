@@ -61,6 +61,7 @@ const chatMessages = $('#chat-messages');
 const chatBubble = $('#chat-bubble');
 const chatPopup = $('#chat-popup');
 const closePopup = $('#close-popup');
+let chatHistory = []; // 本地對話歷史紀錄
 
 // 載入語言資源並切換語言
 const langToggle = $('#lang-toggle');
@@ -233,7 +234,7 @@ function onUserRequest(message) {
     fetch('/askbot', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question: message })
+        body: JSON.stringify({ question: message, chat_history:chatHistory })
       })
     .then(response => {
         if (!response.ok) {
@@ -260,6 +261,15 @@ function onUserRequest(message) {
             chatBubble.html(safeHtml);
             // 讓所有超連結在新分頁開啟
             chatBubble.find('a').attr('target', '_blank').attr('rel', 'noopener noreferrer');
+        }
+
+        if (data.chat_history) {
+            chatHistory = data.chat_history;
+        } else {
+            chatHistory.push({
+                "User": message,
+                "Assistant": data.answer
+            });
         }
         // 送出按鈕變成送出，然後enable，可以再次送出
         $('#chat-submit').text(languages[currentLanguage].submit);

@@ -44,18 +44,21 @@ app.use('/eip/askbot', limiter);
 app.use('/askbot', limiter);
 
 app.post(['/eip/askbot', '/askbot'], async (req, res) => { // "/eip/askbot" for webui dev, "/askbot" for local pc dev
-  const { question } = req.body;
+  const { question, chat_history } = req.body;
 
   if (!question) {
       return res.status(400).json({ error: '請提供問題' });
   }
+
+  const currentChatHistory = chat_history || [];
+
   // 呼叫 API 取得答案
   try {
     const apiUrl = `${process.env.BACKEND_URL}/ask`;
-    const response = await axios.post(apiUrl, { question });
-    const answer = response.data.answer;
+    const response = await axios.post(apiUrl, { question, chat_history: currentChatHistory });
+    const {answer, sources, chat_history: updatedChatHistory} = response.data.answer;
 
-    res.json({ answer });
+    res.json({ answer, sources, chat_history: updatedChatHistory });
   } catch (error) {
     console.error('Error calling API:', error);
     res.status(500).json({ error: 'API 呼叫失敗' });

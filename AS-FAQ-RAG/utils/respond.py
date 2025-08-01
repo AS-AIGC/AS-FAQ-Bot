@@ -19,8 +19,8 @@ except Exception as e:
     SYSTEM_PROMPT = "You are a helpful assistant."
     TRANSLATION_PROMPT = "Translate to English: {text}"
     LANGUAGE_DETECTION_PROMPT = "Task: Detect the language of the following text: {query} If the text is Chinese, reply '台灣繁體中文'. If the text is in any other language, reply 'english'. Only reply with the language code."
-    QA_PROMPT = "這是和這個問題可能相關的背景知識: {context} 使用者的問題: {query}，以 {lang} 回覆"
-    QA_PROMPT_EN = "Background Knowledge: {context} USER's QUESTION: {query} , response in {lang}"
+    QA_PROMPT = "對話歷史：{previous_chat} 這是和這個問題可能相關的背景知識: {context} 使用者的問題: {query}，以 {lang} 回覆"
+    QA_PROMPT_EN = "Conversation History: {previous_chat} Background Knowledge: {context} USER's QUESTION: {query} , response in {lang}"
 
 import os
 from dotenv import load_dotenv
@@ -39,6 +39,8 @@ import faiss
 import numpy as np
 import asyncio
 import threading
+
+MAX_HISTORY_ROUND = 1 # 最多要傳入最近幾輪的對話歷史紀錄到 Prompt
 
 # Global Configuration
 class LLMProvider(Enum):
@@ -367,7 +369,7 @@ class SearchQASystem:
             return True
         return False
 
-    async def search_and_answer(self, query: str) -> Tuple[str, List[Dict]]:
+    async def search_and_answer(self, query: str, chat_history: List[Dict]) -> Tuple[str, List[Dict]]:
         """
         Search relevant texts and generate answer
         
@@ -404,7 +406,16 @@ class SearchQASystem:
         relevant_texts = self._search_relevant_texts(query)
         
         # 生成回答
-        answer = await self._generate_answer(query, relevant_texts, detected_lang)
+        chat_his = chat_history[-MAX_HISTORY_ROUND:]
+        answer = await self._generate_answer(query, relevant_texts, chat_his, detected_lang)
+
+        chat_history.append({
+            "User": query,
+            "Assistant": answer,
+        })
+
+        # if (chat_his):
+        #     logger.info(f"History: {chat_his[-1:]}")
 
         logger.info(f"Query: {query}")
         logger.info(f"Relevant texts: {relevant_texts}")
@@ -480,7 +491,7 @@ class SearchQASystem:
 
         return relevant_texts
 
-    async def _format_prompt(self, query: str, relevant_texts: List[Dict], lang: str = "zh") -> str:
+    async def _format_prompt(self, query: str, relevant_texts: List[Dict], history: List[Dict], lang: str = "zh") -> str:
         """
         Format the prompt for the LLM
         
@@ -488,36 +499,42 @@ class SearchQASystem:
             query: User's question
             relevant_texts: List of relevant texts
             lang: Language of the query
+            history: Conversation history (context caching)
             
         Returns:
             Formatted prompt
         """
+        chat_history_text = "\n".join([f"User: {h['User']}\nAssistant: {h['Assistant']}" for h in history])
+
         if lang == "台灣繁體中文" or lang == "zh-TW":
             prompt = QA_PROMPT.format(
                 query=query,
                 context="\n\n".join(relevant_texts),
-                lang=lang
+                lang=lang,
+                previous_chat=chat_history_text
             )
         else:
             prompt = QA_PROMPT_EN.format(
                 query=query,
                 context="\n\n".join(relevant_texts),
-                lang=lang
+                lang=lang,
+                previous_chat=chat_history_text
             )
         return prompt
 
-    async def _generate_answer(self, query: str, relevant_texts: List[Dict], detected_lang: str) -> str:
+    async def _generate_answer(self, query: str, relevant_texts: List[Dict], history: List[Dict], detected_lang: str) -> str:
         """
         Generate answer
         
         Args:
             query: User's question
             relevant_texts: List of relevant texts
+            history: Conversation history (context caching)
             detected_lang: Detected language
             
         Returns:
             Generated answer
         """
-        prompt = await self._format_prompt(query, relevant_texts, detected_lang)
+        prompt = await self._format_prompt(query, relevant_texts, history, detected_lang)
         response = await self.llm_service.generate_response(prompt)
         return response

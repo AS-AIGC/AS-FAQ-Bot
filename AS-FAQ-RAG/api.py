@@ -27,21 +27,22 @@ app.add_middleware(
 # Initialize the Search and QA System
 qa_system = SearchQASystem()
 
-async def stream_response(query: str) -> AsyncGenerator[str, None]:
+async def stream_response(query: str, chat_history: list[dict]) -> AsyncGenerator[str, None]:
     """
     Async generator function to stream the response.
     
     Args:
         query: User's question.
-        
+        chat_history: Conversation history (context caching).
+
     Yields:
         Chunks of the generated response.
     """
     try:
-        answer, sources = await qa_system.search_and_answer(query)
+        answer, sources = await qa_system.search_and_answer(query, chat_history)
         # print(f"User Question: {query}")
         # print(f"AI Answer: {answer}")
-        yield json.dumps({"answer": answer, "sources": sources})
+        yield json.dumps({"answer": answer, "sources": sources, "chat_history": chat_history})
     except Exception as e:
         # Log the error on the server
         logger.error("An error occurred: %s", str(e))
@@ -62,11 +63,12 @@ async def ask_question(request: Request):
     """
     data = await request.json()
     query = data.get("question", "")
+    chat_history = data.get("chat_history", [])
     
     if not query:
         return {"error": "Question not provided"}
-    
-    return StreamingResponse(stream_response(query), media_type="application/json")
+
+    return StreamingResponse(stream_response(query, chat_history), media_type="application/json")
 
 @app.get("/api/rag/embedding-info")
 def get_embedding_info():
