@@ -56,7 +56,7 @@ app.post(['/eip/askbot', '/askbot'], async (req, res) => { // "/eip/askbot" for 
   try {
     const apiUrl = `${process.env.BACKEND_URL}/ask`;
     const response = await axios.post(apiUrl, { question, chat_history: currentChatHistory });
-    const {answer, sources, chat_history: updatedChatHistory} = response.data.answer;
+    const {answer, sources, chat_history: updatedChatHistory} = response.data;
 
     res.json({ answer, sources, chat_history: updatedChatHistory });
   } catch (error) {
