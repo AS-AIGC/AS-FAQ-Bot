@@ -8,12 +8,18 @@ LANGUAGE_DETECTION_PROMPT: |
     Only reply with the language code.
 
 QA_PROMPT: |
+    對話歷史：
+    {previous_chat}
+
     這是和這個問題可能相關的背景知識
     {context}
 
     使用者的問題: {query}，以 {lang} 回覆
 
 QA_PROMPT_EN: |
+    Conversation History:
+    {previous_chat}
+    
     Background Knowledge: This is background knowledge that may be related to this question.
     {context}
 
