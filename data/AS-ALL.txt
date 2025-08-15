@@ -600,6 +600,286 @@ url: https://its.sinica.edu.tw/posts/187040
 contact: 資訊服務處服務台 02-2789-8855
 
 
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 院內 GWS 的登入方式為：Gmail 使用 https://mail.sinica.edu.tw、Google Drive 使用 https://drive.sinica.edu.tw，或可自 Google 首頁登入；登入帳號需使用格式 ＜您的SSO@as.edu.tw＞。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在 GWS 中，登入各項服務前必須完成 FIDO 驗證器綁定；未綁定者將無法登入，請洽單位管理者協助辦理。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在 GWS 登入流程中，若於 Google 首頁輸入帳號後出現「帳號不存在」訊息，請確認您輸入的是正確的格式 ＜您的SSO@as.edu.tw＞。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: GWS 的個人資料（顯示名稱）由院內人事系統自動同步，使用者無法自行修改；如出現錯誤或英文字母大小寫問題，請聯絡單位兼辦人事協助更正。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 目前 GWS 的儲存空間政策，無法申請加大雲端空間，亦不支援由使用者自行購買額外空間。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 本院GWS目前無開放使用Extension功能（擴充功能）。因 Extension 商店尚缺乏完善的管制與安全審核機制，基於資安考量，目前不開放安裝擴充功能。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 若需快速查詢 Google Workspace Education Plus 所包含的應用與功能，建議參閱 Google 官方的 Workspace 版本比較頁面、直接於 Gemini 提問，或聯繫本院資訊服務窗口協助查詢。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 院內信箱轉換為GWS之Gmail服務後，原有郵件地址仍可使用：可接收寄至 @sinica.edu.tw、@gate.sinica.edu.tw、@as.edu.tw 的郵件；完成相關設定後亦可使用 @sinica.edu.tw 與 @gate.sinica.edu.tw 作為寄件地址進行寄信。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在 Outlook 設定 GWS 郵件時，常見問題是程式呼叫過舊的 IE 內嵌瀏覽器，導致 Google 驗證頁面無法正常呈現；請就近尋求單位資訊人員協助調整設定。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 想使用外部郵件用戶端(Outlook, Thunderbird, Mac郵件等等)接受Gmail郵件時，郵件連線參數為：IMAP 伺服器 imap.gmail.com、連接埠 993（SSL）；SMTP 伺服器 smtp.gmail.com、連接埠 465（SSL）。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 因Google本身資安規範，本院 Gmail 帳號無法透過 Microsoft Outlook 的 POP3 模式新增使用，原因是 Outlook 的 POP3 模式不支援 Google 所要求的 OAuth 驗證機制，因此無法完成帳號驗證；建議改用 IMAP 方式收信，或改用 Thunderbird 郵件軟體以確保順利收發信件。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在行動裝置使用 Gmail App 設定 GWS 郵箱時，若出現無反應或錯誤訊息，常見原因是手機未設定螢幕鎖（如密碼、Face ID、指紋等），或短時間內授權請求過多遭 Google 封鎖；請確認已設定螢幕鎖，如已設定仍有問題，請稍候再試。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 如先前在 Mail2000 信箱設定了轉寄至其他郵件地址，建議取消該設定，並於 GWS 郵件中重新設定轉寄；轉寄設定中如有 @as.edu.tw 地址，請勿移除。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在行動裝置登入 Gmail App 檢視郵件時，建議調整手勢設定，將預設的「滑動封存」動作改為其他設定，以避免誤封存信件；設定方式為：Android：Menu → 設定 → 一般設定 → 郵件滑動操作；iOS：Menu → 設定 → 收件匣自訂 → 郵件滑動動作。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在 GWS 中，Gmail 的封存功能會將郵件移至「所有郵件」資料夾而非刪除；使用者可在網頁版或行動版 Gmail 左側選單中找到「所有郵件」，或透過搜尋功能找到封存郵件；如需恢復至收件匣，可於「所有郵件」中選取郵件後使用「移至收件匣」功能。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: Gmail 預設開啟「會話檢視」功能，會將相同主題的郵件串在一起方便閱讀；如需將每封郵件單獨顯示，可在 Gmail 設定中關閉「會話檢視」。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在 Gmail 中，當使用者寄信或 CC 給自己的帳號或所屬群組時，郵件預設不會顯示在收件匣；如需顯示，請至 Gmail 設定 → 帳戶與匯入 → 以這個地址寄信，新增並驗證 @gate 或 @sinica 網域帳號，並確保該帳號出現在寄件者清單中（不需勾選為別名）。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在 Gmail 中，即使信箱已在 Mlist 群組名單內，當寄信到自己帳號或所屬群組時，郵件仍不會出現在收件匣；此為 Gmail 預設行為，可在「寄件備份」或「所有郵件」中找到；如需顯示，請於 Gmail 設定郵件篩選器與標籤。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在 Gmail 中，一次寄送過多收件人（如超過 100 人）、重複附件或相同標題，可能會觸發 Google 的反濫用機制導致退信；建議使用郵件合併功能分批寄送，以避免被退信。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 院內原Mail2000 系統預計於兩年內下架，屆時會另行通知；建議於所屬單位導入 GWS 後，即轉移至 Gmail 收信，以免 Mail2000 下架時影響郵件使用。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 院內提供的新舊信件轉換工具，目前沒有使用期限；若當下工作繁忙，可於日後再進行，甚至可等到全院導入結束後再搬遷，以減少因人數過多需要排程的情況。除非先前有設定「轉寄不留備份」，否則在 Mail2000 下架前，仍可回到 Mail2000 查詢舊郵件。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在搬遷信件流程中，若授權 GWS 帳號時出現「無法授權」畫面，請先確認已登入本院 GWS 帳號，再重新執行授權程序；未登入將無法順利完成帳號授權。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在使用信件搬遷功能時，若搬遷尚未完成便開始整理信件，可能會導致舊信重新搬入；建議等待收到「中央研究院資訊服務處新舊郵件轉換完成通知」後再整理信件，以避免重複或錯亂。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在使用信件搬遷功能時，必須等待系統完成所有信件的轉換後再於 Gmail 進行郵件調整；若未等到「搬遷完成通知」就開始操作，系統可能會判斷舊郵件不存在而再次搬遷。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在信件搬遷功能中，搬遷所需時間會顯示於新舊信件轉換頁面，使用者可參考該頁面的進度資訊；開始搬遷後，即使關閉該頁面，系統仍會在背景持續進行搬遷作業。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在將 Mail2000 信件搬遷至 GWS Gmail 的過程中，由於 Gmail 採用「標籤」取代 Mail2000 的「資料夾」，且不支援傳統階層結構，資料夾順序可能與原先不同；如需維持排序，可自行為標籤編號，例如「01_重要」、「02_工作郵件」。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在使用信件搬遷工具時，如一直顯示密碼錯誤，即使密碼正確，也需檢查 Mail2000 的 IMAP 設定是否已開啟；未開啟 IMAP 也會導致系統顯示密碼錯誤。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在信件搬遷中，若同一封郵件在 Mail2000 的不同資料夾中出現，系統會依郵件的 UID（唯一識別碼）判斷是否為相同郵件；若 UID 相同，則僅會搬遷一份至 Gmail。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在將 Mail2000 信件搬遷至 Gmail 時，即使 Mail2000 顯示郵件未超過 25MB，也可能因 Gmail 與 Mail2000 的郵件大小計算方式不同，導致在 Gmail 判定超過 25MB 上限而無法搬遷。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在 Google Meet 中，本院使用的 GWS 為 Education Plus 版本，會議時長上限為 24 小時，最多可容納 1000 位參與者，並提供直播、分組討論室、投票、問答、出席狀況追蹤、自動錄製、轉錄稿及會議記錄等功能；詳細資訊可參閱 Google 官方「Education Plus」說明頁面。https://support.google.com/a/answer/10037875?hl=zh-Hant&co=DASHER._Family%3DEducation&oco=0
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在 Google Meet 中，若會議應支援 1000 人但於約 100 人時就無法再加入或出現自動踢出情況，請確認會議連結是使用院內 GWS 教育帳號建立；個人 Google 帳號建立的會議預設參與人數上限為 100 人，無法支援大型會議需求。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在 GWS 的 Gemini 服務中，本院使用的 Google Workspace Education Plus 授權僅包含 Gemini 教育免費版，不含 Gemini Advanced；Deep Research 目前不包含 2.5 Pro 版本。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在 GWS 提供的 NotebookLM 服務中，目前僅提供標準版 NotebookLM，並不包含 NotebookLM Plus 的功能。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在 GWS 的 Gemini 應用中，使用公司或學校帳戶時，無法手動刪除對話與活動紀錄；系統會保留對話 3 個月，之後自動移除。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在 GWS 的 Gemini 服務中，使用者的提示與生成內容會保留於本院組織內，不會被人工審查、不會用於訓練 Google AI 模型，亦不會與其他使用者或機構共享；此外，Gemini for Google Workspace 遵循與 Gmail 與 Google Docs 相同的企業級安全與隱私保護標準，包括資料區域政策與資料遺失防護（DLP）等機制。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在 GWS 導入後，本院全體使用者皆可使用 Gemini 教育免費版；每位使用者每月最多可使用 1,000 次，並支援上傳本機檔案或讀取 Google 雲端硬碟資料進行分析，也可建立自訂 Gem 以增加應用彈性。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: GWS雲端服務
+context: 在 GWS 中，目前使用的教育免費版不包含 Gemini 進階協作功能，例如在 Google 文件或 Gmail 側邊欄使用 Gemini；若未來授權升級或政策調整，將另行公告。
+url: https://its.sinica.edu.tw/pages/4532
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務
+title: 退休人員專用信箱Alum
+context: 本院自 114 年起，提供退休人員專用信箱： SSO帳號@alum.sinica.edu.tw。容量限制：帳號總容量為 50GB，包含 Gmail、Google Drive、Google Sites 等Google服務。續用確認機制：每年將寄送「是否繼續使用」確認信件，請依說明回覆，以維持帳號有效性。alum信箱登入方式：開啟瀏覽器前往：https://mail.google.com帳號：您的SSO帳號@alum.sinica.edu.tw密碼：您所設定的密碼
+url: https://its.sinica.edu.tw/pages/alumni
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務
+title: 退休人員專用信箱Alum
+context: 114年3月20日（含）以後退休者(原使用 Google Workspace (GWS) 服務)信箱變更說明：退休生效日前一個月即啟用退休人員alum信箱。原帳號信件（SSO帳號@as.edu.tw 及 SSO帳號@gate.sinica.edu.tw）會於退休日後自動轉寄至alum信箱。退休前須完成事項：測試新信箱登入並變更密碼：開啟瀏覽器前往：https://mail.google.com帳號：您的SSO帳號@alum.sinica.edu.tw初始密碼：由資訊處另行Email通知重要：首次登入後請立即變更密碼備份重要郵件：請於退休前將 GWS 信件自行備份。若信件數量龐大，或是想全部搬至alum信箱，可等候 115 年推出的「郵件轉換工具」，可直接進行轉移處理。移轉工具完成前，仍可登入GWS信箱查閱舊信。各單位行政人員協助事項：即日起至 114 年 12 月 31 日止，請提供預定退休人員名單。名單確認後，請主動通知資訊處，以利提前建立 alum 帳號與提供支援。回報表單：https://forms.gle/EEpSVUKE3qNwv2u88
+url: https://its.sinica.edu.tw/pages/alumni
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務
+title: 退休人員專用信箱Alum
+context: 114年3月20日（前）退休者(原使用 Mail 2000 服務)帳號建立與啟用說明：自 114 年 7 月 1 日起，資訊處將批次建立既有退休人員之alum信箱。待您帳號建立完成後，啟用信件會寄送到您原本的gate信箱(原Mail2000)。請依通知內容登入並變更密碼以啟用。信件自動轉寄：原帳號信件（SSO帳號@gate.sinica.edu.tw）會自動轉寄至alum信箱。使用郵件轉換工具：資訊處將於114年第三季提供專用「郵件轉換工具」，可直接將mail2000信轉移至alum信箱。資深退休人員@alum信箱說明專區：https://sites.google.com/as.edu.tw/alum
+url: https://its.sinica.edu.tw/pages/alumni
+contact: 資訊服務處服務台 02-2789-8855
+
+
 category: 科普活動
 title: 中研講堂──跨縣市科普演講
 context: 中研院自107年起舉辦「中研講堂──跨縣市科普演講」，以利外縣市學子可聆聽中研院研究演講，不受交通、城鄉差距等因素影響。「中研講堂──跨縣市科普演講」，由院內研究人員向民眾分享研究成果。目前已造訪12個縣市，各場次平均報名達300人、演講影片最高觀看次數逾 14萬次。未來，中研院將持續規劃舉辦，並優先考量於未造訪過之縣市舉行。
