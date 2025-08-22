@@ -45,3 +45,26 @@ ehthumbs.db
 
 # Tailwind CSS output
 */css/tailwind-output.css
+
+# 設置所有文本文件使用 LF
+* text=auto eol=lf
+
+# 特定文件類型的設置
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+
+# Windows 批次檔和腳本保持 CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# 二進制文件不轉換
+*.bin binary
+*.exe binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary

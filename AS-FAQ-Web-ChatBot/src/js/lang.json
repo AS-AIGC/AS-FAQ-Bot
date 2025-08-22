@@ -1,7 +1,7 @@
 {
     "zh-TW": {
         "welcome": "AS萬事通 (測試版)",
-        "ask": "問問AS萬事通吧... (目前僅一問一答，無記憶功能)",
+        "ask": "問問AS萬事通吧...",
         "submit": "送出",
         "disclaimer": "本服務由 AI 回答，可能存在錯誤，如有疑問請洽服務台 (02)2789-8855。",
         "terms": "使用本服務即表示您同意遵守以下使用條款：",
@@ -13,7 +13,7 @@
     },
     "en": {
         "welcome": "AS Ask (Beta)",
-        "ask": "Ask... (Currently one question at a time, no memory)",
+        "ask": "Ask...",
         "submit": "Submit",
         "disclaimer": "This service is powered by AI and may contain errors. If you have any questions, please contact the service desk at (02)2789-8855.",
         "terms": "By using this service, you agree to the following terms:",
