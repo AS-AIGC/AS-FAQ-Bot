@@ -40,8 +40,6 @@ import numpy as np
 import asyncio
 import threading
 
-MAX_HISTORY_ROUND = 1 # 最多要傳入最近幾輪的對話歷史紀錄到 Prompt
-
 # Global Configuration
 class LLMProvider(Enum):
     GEMINI = "gemini"
@@ -98,7 +96,10 @@ CONFIG = {
     
     # Vector Search Configuration
     "VECTOR_MODEL": os.getenv("VECTOR_MODEL", "multi-qa-mpnet-base-dot-v1"),
-    "TOP_K_RESULTS": 10,
+    "TOP_K_RESULTS": int(os.getenv("TOP_K_RESULTS", "5")),
+
+    # chat history 最多要傳入最近幾輪的對話歷史紀錄到 Prompt
+    "MAX_HISTORY_ROUND": int(os.getenv("MAX_HISTORY_ROUND", "2")),
     
     # Debug Mode
     "DEBUG_MODE": os.getenv("DEBUG_MODE", "false").lower() == "true",
@@ -167,24 +168,26 @@ class LLMService:
                 return response.text
                 
             elif self.provider == LLMProvider.OPENAI:
-                # 未加入system prompt
                 response = self.client.chat.completions.create(
                     model=CONFIG["OPENAI_MODEL"],
-                    messages=[{"role": "user", "content": prompt}]
+                    messages=[
+                        {"role": "system", "content": SYSTEM_PROMPT},
+                        {"role": "user", "content": prompt}
+                    ]
                 )
                 return response.choices[0].message.content
                 
             elif self.provider == LLMProvider.OLLAMA:
-                # 未加入system prompt
                 response = await asyncio.to_thread(
                     requests.post,
                     f"{CONFIG['OLLAMA_BASE_URL']}/api/generate",
                     json={
                         "model": CONFIG["OLLAMA_MODEL"],
                         "prompt": prompt,
+                        "system": SYSTEM_PROMPT,
                         "stream": False,
                         "options": {
-                            "num_ctx": 30000
+                            "num_ctx": 10000
                         }
                     }
                 )
@@ -198,8 +201,8 @@ class LLMService:
                         {"role": "user", "content": prompt}
                     ],
                     "stream": False,
-                    "options": {
-                        "num_ctx": 30000
+                    "params": {
+                        "num_ctx": 10000
                     }
                 }
                 response = await asyncio.to_thread(
@@ -212,10 +215,12 @@ class LLMService:
                 return response.json()["choices"][0]["message"]["content"]
                 
             elif self.provider == LLMProvider.GROQ:
-                # 未加入system prompt
                 response = self.client.chat.completions.create(
                     model=CONFIG["GROQ_MODEL"],
-                    messages=[{"role": "user", "content": prompt}]
+                    messages=[
+                        {"role": "system", "content": SYSTEM_PROMPT},
+                        {"role": "user", "content": prompt}
+                    ]
                 )
                 return response.choices[0].message.content
                 
@@ -406,7 +411,7 @@ class SearchQASystem:
         relevant_texts = self._search_relevant_texts(query)
         
         # 生成回答
-        chat_his = chat_history[-MAX_HISTORY_ROUND:]
+        chat_his = chat_history[-CONFIG["MAX_HISTORY_ROUND"]:]
         answer = await self._generate_answer(query, relevant_texts, chat_his, detected_lang)
 
         chat_history.append({
@@ -479,7 +484,7 @@ class SearchQASystem:
             CONFIG["TOP_K_RESULTS"]
         )
         relevant_texts = [
-            f"Title: {self.data[i]['title']}\nContext: {self.data[i]['context']}\nSource: {self.data[i]['url']}"
+            f"## Title \n\n{self.data[i]['title']}\n\n## Context \n\n{self.data[i]['context']}\n\n## Source \n\n{self.data[i]['url']}"
             for i in indices[0]
         ]
 

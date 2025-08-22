@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 import pandas as pd
 import logging
 import subprocess
@@ -12,6 +13,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
+load_dotenv(dotenv_path=os.path.join(os.getcwd(), ".env"))
 
 # 下載github repo
 def download_github_repo():

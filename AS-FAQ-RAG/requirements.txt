@@ -8,7 +8,6 @@ faiss-cpu
 requests
 numpy
 pandas
-googletrans>=4.0.2
 schedule
 pyyaml
 dotenv

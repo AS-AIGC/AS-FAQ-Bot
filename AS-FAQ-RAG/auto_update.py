@@ -18,6 +18,7 @@ import schedule
 from datetime import datetime
 import sys
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Add the project root to the Python path to import local modules
 sys.path.append(str(Path(__file__).parent))
@@ -115,6 +116,7 @@ if __name__ == "__main__":
         logger.info("Starting automated data update service")
         # Run update immediately on startup
         logger.info("Running initial update...")
+        load_dotenv(dotenv_path=os.path.join(os.getcwd(), ".env"))
         if REPO_URL is None or REPO_URL == "":
             logger.error("REPO_URL environment variable is not set. Exiting.")
             sys.exit(1)
