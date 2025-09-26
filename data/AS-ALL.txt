@@ -160,6 +160,13 @@ contact: 資訊服務處服務台 02-2789-8855
 
 
 category: 全院共用服務-網路資訊
+title: GWS電子郵件及硬碟服務
+context: 為提供本院同仁一個更便利的電子郵件暨雲端硬碟服務，自114年3月20日起，逐步將本院SSO Gate帳號導入GWS電子郵件暨雲端硬碟服務。帳號申請本服務依 中央研究院電子郵件服務規範 (https://www.sinica.edu.tw/CP/382) 提供服務。個人帳號 –本院同仁於完成人事報到程序且到職日生效後，自動取得與本院SSO帳號名稱一致之GWS電子郵件暨雲端硬碟服務帳號。申請帳號後2小時洽詢各單位資訊室管理者完成綁定FIDO驗證，方能登入使用。離職後無法使用本服務，正編退休人員請改用@alum服務。業務帳號 -將於第二階段導入後開放申請。有需求請先申請原Gate電子郵件業務帳號服務。登入、驗證及使用快速登入網址如下：        Mail：https://mail.sinica.edu.tw        Drive：https://drive.sinica.edu.tw操作及設定請參閱員工使用指引 – https://its.sinica.edu.tw/pages/4532個人帳號 – 登入驗證方式與本院入口網（https://sso.sinica.edu.tw）相同。業務帳號 - 將於第二階段導入後開放申請。如有需求請先申請原Gate電子郵件業務帳號服務。
+url: https://its.sinica.edu.tw/posts/117170
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
 title: 業務用電子郵件服務
 context: 中研院資訊服務處提供業務用Gate電子郵件帳號，供中研院同仁申請，用於處理公務或作為代表信箱。本服務預計於115年導入GWS服務。申請業務用郵件帳號可透過全院電子表單整合平台進行線上申請，或填寫紙本申請單後送交至行政大樓4樓資訊服務處。詳細資訊請參閱https://its.sinica.edu.tw/posts/117175。
 url: https://its.sinica.edu.tw/posts/117175
