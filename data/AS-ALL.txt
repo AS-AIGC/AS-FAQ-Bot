@@ -63,7 +63,7 @@ contact: 資訊服務處服務台 02-2789-8855
 
 category: 全院共用服務-綜合業務
 title: 個人網頁服務
-context: 資訊服務處提供個人網頁服務，同仁取得gate電子郵件服務帳號後，就同時擁有自己個人網站空間，網頁空間容量為1GB。本服務以靜態網頁方式呈現，主機名稱為idv.sinica.edu.tw，個人網址https://idv.sinica.edu.tw/username，其中username為您的帳號名稱，與郵件帳號名稱相同；密碼為您的郵件信箱密碼，且自動同步更新。目前無法支援動態網頁及資料庫。  個人網頁服務提供 SFTP 遠端安全連線協定，傳輸檔案可下載支援安全協定SFTP 的程式例如winscp或filezilla取代ftp。製作完成網頁檔案後，上傳至伺服器目錄public_html，即可透過個人網址瀏覽，因資安要求，目錄顯示功能預設關閉。可公開檔案才能放在public_html目錄內。本服務須透過中研院網路（包含 VPN 服務）登入上傳更新資料。個人網頁服務每日自動進行電腦病毒掃描作業，如有發現疑似中毒檔案，將主動E-mail通知。同時，每個月自動寄發網頁使用狀態數據分析報告。
+context: 為提供更友善的靜態網頁編輯體驗，並配合本院服務整併規劃，本處提供之個人網頁空間服務（https://idv.sinica.edu.tw/您的USERID）將於 115 年 9 月正式下線，新進同仁帳號自即日起停止開立。敬請同仁儘早完成資料備份與轉移，或改用本院提供的 Google Sites（Google 協作平台）作為對外分享靜態網頁的替代方式。Google Sites 提供圖文排版、拖曳式編輯與簡易網址設定等功能，可快速建立靜態網站並設定檢視權限。一、idv 網頁資料備份方式（以 WinSCP 為例）    請於院內網路或 VPN 環境下操作：    下載並安裝 WinSCP：    https://winscp.net    開啟 WinSCP 並建立新連線，設定如下：       協定：SFTP  主機名稱：idv.sinica.edu.tw  使用者名稱：您的 gate 帳號（如 abc123） 密碼：您的電子郵件密碼    成功連線後，將目錄中的所有內容下載至您本機電腦，其中public_html目錄即為您個人網頁資料。 二、建立 Google Sites 網站步驟    前往 Google Sites： https://sites.google.com    點選「空白」建立新網站    輸入網站名稱與標題（例如：個人首頁）    手動新增頁面內容，例如：        複製舊網站文字內容貼入文字區塊        插入圖片、PDF 或其他檔案（使用「插入」→「文件」功能）        若網站中含有 HTML 元素，可使用「內嵌程式碼」功能插入簡單 HTML        點選「發布」，設定網站網址，例如：        https://sites.google.com/as.edu.tw/您的帳號              (本院在職同仁)    https://sites.google.com/alum.sinica.edu.tw/您的帳號     (本院正編退休同仁)    並選擇網站開放範圍三、轉址服務    本處提供為期 6 個月的轉址服務。    請於完成 Google Sites 網頁並取得網址後，透過本處電子服務台或寄信至its@sinica.edu.tw提出轉址申請，我們將協助您將原網址（https://idv.sinica.edu.tw/您的USERID）導向新站點。    請提供1.原idv服務網址 2.轉址目的網址 供本處完成轉址設定。四、注意事項    請務必於服務下線前完成資料備份與遷移作業。    原服務關閉後，https://idv.sinica.edu.tw/username 將不再可使用，屆時僅提供 6 個月的轉址過渡期。五、進階網頁服務需求    若您是進階使用者且網頁內容為本院相關業務，有自行上傳並維護較複雜語法的 HTML/CSS 靜態網頁的需求。    建議可以參考本處提供的「網頁空間服務」，由本院在職助研究員以上/一級單位主管/院本部單位主管/單位資訊業務主管提出申請，申請詳情請參閱：    https://its.sinica.edu.tw/pages/2366
 url: https://its.sinica.edu.tw/pages/1678
 contact: 資訊服務處服務台 02-2789-8855
 
@@ -91,7 +91,7 @@ contact: 資訊服務處服務台 02-2789-8855
 
 category: 全院共用服務-網路資訊
 title: 個人雲端儲存服務
-context: 中研院個人雲端儲存服務，提供每位同仁40GB雲端儲存空間，以及版本存留功能，可以恢復近10次版本檔案。單一檔案上傳最大2GB，並可在個人電腦安裝代理程式(agent)後，業務檔案可同步備份至雲端儲存平台，強化檔案保全。相關操作說明及手冊請參考https://its.sinica.edu.tw/pages/1683。本服務即將於114年下架，請同仁提早備份並改用GWS服務。
+context: 為提供更友善、現代化的雲端硬碟與線上共同編輯服務，本處將推廣本院 「Google 雲端硬碟(以下簡稱Google Drive）」服務，全面取代原「個人雲端儲存服務(Myspace)」。Google Drive 提供雲端儲存、檔案同步與線上協作等功能，可快速上傳與分享各類文件，並能設定檢視或編輯權限，方便跨裝置存取與團隊合作。原個人雲端儲存(Myspace)將於 115 年 1 月 31 日完成下線，屆時將不再提供存取。請同仁儘早將既有資料備份並轉移至Google Drive ，以防止資料遺失。感謝您的配合與支持。個人雲端儲存服務(Myspace)轉移說明：一、Myspace資料備份方式    1.如已安裝ArkEase Pro Cloud Sync同步工具      請開啟工具後，確認已勾選同步所有目錄。完成同步後，移除ArkEase Pro Cloud Sync即可。      檔案會保留於原設定位置，不會被刪除。    2.如未安裝ArkEase Pro Cloud Sync同步工具            建議登入https://myspace.sinica.edu.tw後，自Web界面下載檔案保存。二、如有使用Myspace資料分享功能    1.新的分享需求，請改以Google Drive分享    2.舊的分享設定，如服務下線後仍有需求，請於服務下線前，逐步改用Google Drive分享。    Google Drive分享設定方式，請參考Google官方說明文件     https://support.google.com/drive/answer/2494822
 url: https://its.sinica.edu.tw/pages/1683
 contact: 資訊服務處服務台 02-2789-8855
 
