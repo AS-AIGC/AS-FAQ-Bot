@@ -106,7 +106,7 @@ Calendar：https://calendar.sinica.edu.tw
 全院共用服務-網路資訊,會議網路,如需租用中研院人文館、活動中心或蔡元培館會議室的會議網路服務，請填寫會議網路服務申請表，並在會議前三個月至一週前提交申請表至資訊服務處。會議網路使用場地之單位若為中研院院本部主辦之會議免收費；中研院所處中心需要付費使用，比照院內公用儀器設施使用，費用將減收50%。另，若使用常設無線網路服務AS_Secure、AS_Guest及eduroam則免申請及收費，詳細說明請參考https://its.sinica.edu.tw/pages/1684。,資訊,https://its.sinica.edu.tw/pages/1684,資訊服務處服務台 02-2789-8855
 全院共用服務-網路資訊,宿舍網路,"資訊服務處於宿舍內提供有線網路服務，每戶提供1個IP位置及戶內既有之網點，無須額外付費。
 若宿舍內需使用多個設備同時上網，請自備IP分享器及網路線。
-各項宿舍網路異動請於一週前提出申請，申請表請至資訊服務處網頁點選下載專區之宿舍網路申請表下載填寫。",資訊,,資訊服務處服務台 02-2789-8855
+各項宿舍網路異動請於一週前提出申請，申請表請至資訊服務處網頁點選下載專區之宿舍網路申請表下載填寫。",資訊,https://its.sinica.edu.tw/pages/4412,資訊服務處服務台 02-2789-8855
 全院共用服務-網路資訊,虛擬網路VPN連線服務,"中研院資訊服務處提供虛擬私有網路(VPN)遠端連線服務，以供同仁在院外透過VPN取得中研院IP位址，可持續進行學術研究工作或使用行政相關服務。首次使用需先完成VPN服務使用權限開通，並打開Google Authenticator掃描信中QR code即可完成驗證，取得動態密碼。使用者登入VPN時，需輸入gate電子郵件帳號、密碼，以及6位數動態密碼，方可登入。
 
 若VPN服務在90天內沒有使用紀錄，系統將自動關閉，有需要使用可再次申請開通。連線使用說明請參考https://its.sinica.edu.tw/pages/1685。",資訊,https://its.sinica.edu.tw/pages/1685,資訊服務處服務台 02-2789-8855
@@ -138,9 +138,9 @@ Calendar：https://calendar.sinica.edu.tw
     SMTP（外寄伺服器）： 伺服器為 smtp.gmail.com，使用 Port 465
     IMAP（內送伺服器，支援 SSL）： 伺服器為 imap.gmail.com，使用 Port 993
 相關設定請參考：https://its.sinica.edu.tw/pages/4694",資訊,https://its.sinica.edu.tw/posts/117185,資訊服務處服務台 02-2789-8855
-全院共用服務-網路資訊,業務用電子郵件服務,"中研院電子郵件服務可使用Thunderbird、Windows Live Mail 2011、Microsoft Outlook、Android、MAC OSX、 iOS (iphone/ipad)等軟體來收發信件。
+全院共用服務-網路資訊,業務用電子郵件服務,"中研院業務電子郵件服務可使用Thunderbird、Windows Live Mail 2011、Microsoft Outlook、Android、MAC OSX、 iOS (iphone/ipad)等軟體來收發信件。
 
-基本設定如下：帳號為您的SSO帳號，密碼為您的SSO密碼，SMTP(外寄伺服器)smtp.sinica.edu.tw，port:25；SMTP with TLS (外寄加密)：smtp.sinica.edu.tw，port:25；SMTPS (外寄加密)：smtp.sinica.edu.tw，port:25；POP(s) (pop內送伺服器)：gate.sinica.edu.tw，POP port:110，POPS port:995；IMAP(s) (imap內送伺服器):gate.sinica.edu.tw，IMAP port:143，IMAPS port:993。服務使用限制IMAP/POP3收信服務及SMTP寄信服務限中研院網路環境使用，若在院外有需要透過第三方收信軟體收發信件請連線VPN服務後使用，其他詳細設定請參考網站https://its.sinica.edu.tw/posts/117220。",資訊,https://its.sinica.edu.tw/posts/117185,資訊服務處服務台 02-2789-8855
+基本設定如下：帳號為您的業務帳號，密碼為您的業務密碼，SMTP(外寄伺服器)smtp.sinica.edu.tw，port:25；SMTP with TLS (外寄加密)：smtp.sinica.edu.tw，port:25；SMTPS (外寄加密)：smtp.sinica.edu.tw，port:25；POP(s) (pop內送伺服器)：gate.sinica.edu.tw，POP port:110，POPS port:995；IMAP(s) (imap內送伺服器):gate.sinica.edu.tw，IMAP port:143，IMAPS port:993。服務使用限制IMAP/POP3收信服務及SMTP寄信服務限中研院網路環境使用，若在院外有需要透過第三方收信軟體收發信件請連線VPN服務後使用，其他詳細設定請參考網站https://its.sinica.edu.tw/posts/117220。",資訊,https://its.sinica.edu.tw/posts/117185,資訊服務處服務台 02-2789-8855
 全院共用服務-網路資訊,電子郵件服務,"電子郵件提供垃圾信阻絕服務，用於阻擋垃圾與病毒郵件，阻絕設備有五項準則用於決定郵件是否放行，包括封鎖不明收件者、封鎖黑名單表列者、封鎖病毒信件、隔離已確認的垃圾信、放行被加標記的疑似垃圾信以及放行正常信件，已確認為垃圾信的郵件會被置放在阻絕設備的隔離區，使用者會收到當日的隔離通知信，內容記載每封垃圾信的日期、來源地址和主旨。使用者可以檢視隔離通知信的內容，以救回被誤判的正常信件、刪除垃圾信或設定黑白名單。
 
 連線至信件隔離區首先要請您確認目前是位於中研院內網路環境，而有兩種方式您可以連線至信件隔離區，方法一打開垃圾隔離區摘要信件，點選看您所有的隔離信件或管理您的參數設定，會直接連結至隔離區；方法二若已經刪除所有垃圾隔離區摘要信件，請直接連線到網址https://fmail0.its.sinica.edu.tw。詳細說明請參考網站：https://its.sinica.edu.tw/posts/117204
