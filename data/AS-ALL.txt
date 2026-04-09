@@ -861,14 +861,14 @@ contact: 資訊服務處服務台 02-2789-8855
 
 category: 全院共用服務
 title: 退休人員專用信箱Alum
-context: 114年3月20日（含）以後退休者(原使用 Google Workspace (GWS) 服務)信箱變更說明：退休生效日前一個月即啟用退休人員alum信箱。原帳號信件（SSO帳號@as.edu.tw 及 SSO帳號@gate.sinica.edu.tw）會於退休日後自動轉寄至alum信箱。退休前須完成事項：測試新信箱登入並變更密碼，開啟瀏覽器前往：https://mail.google.com，帳號：您的SSO帳號@alum.sinica.edu.tw，初始密碼由資訊處另行Email通知，首次登入後請立即變更密碼。請於退休前將 GWS 信件自行備份。若信件數量龐大，或是想全部搬至alum信箱，可等候 115 年推出的「郵件轉換工具」，可直接進行轉移處理。移轉工具完成前，仍可登入GWS信箱查閱舊信。各單位行政人員協助事項：即日起至 114 年 12 月 31 日止，請提供預定退休人員名單。名單確認後，請主動通知資訊處，以利提前建立 alum 帳號與提供支援。回報表單：https://forms.gle/EEpSVUKE3qNwv2u88
+context: 114年3月20日（含）以後退休者(原使用 Google Workspace (GWS) 服務)信箱變更說明：退休生效日前一個月即啟用退休人員alum信箱。原帳號信件（SSO帳號@as.edu.tw 及 SSO帳號@gate.sinica.edu.tw）會於退休日後自動轉寄至alum信箱。退休前須完成事項：測試新信箱登入並變更密碼，開啟瀏覽器前往：https://mail.google.com，帳號：您的SSO帳號@alum.sinica.edu.tw，初始密碼由資訊處另行Email通知，首次登入後請立即變更密碼。請於退休前將重要 GWS 信件完成備份或移轉。可透過「郵件轉換工具」將as信箱郵件移轉至 alum 信箱，無需手動操作。郵件轉換工具：https://fiza.apps.sinica.edu.tw/alum；操作使用說明：https://sites.google.com/as.edu.tw/alum/email_sync_service_guide。
 url: https://its.sinica.edu.tw/pages/alumni
 contact: 資訊服務處服務台 02-2789-8855
 
 
 category: 全院共用服務
 title: 退休人員專用信箱Alum
-context: 114年3月20日（前）退休者(原使用 Mail 2000 服務)帳號建立與啟用說明：自 114 年 7 月 1 日起，資訊處將批次建立既有退休人員之alum信箱。待您帳號建立完成後，啟用信件會寄送到您原本的gate信箱(原Mail2000)。請依通知內容登入並變更密碼以啟用。信件自動轉寄：原帳號信件（SSO帳號@gate.sinica.edu.tw）會自動轉寄至alum信箱。使用郵件轉換工具：資訊處將於114年第三季提供專用「郵件轉換工具」，可直接將mail2000信轉移至alum信箱。資深退休人員@alum信箱說明專區：https://sites.google.com/as.edu.tw/alum
+context: 114年3月20日（前）退休者(原使用 Mail 2000 服務)帳號建立與啟用說明：自 114 年 7 月 1 日起，資訊處將批次建立既有退休人員之alum信箱。待您帳號建立完成後，啟用信件會寄送到您原本的gate信箱(原Mail2000)。請依通知內容登入並變更密碼以啟用。信件自動轉寄：原帳號信件（SSO帳號@gate.sinica.edu.tw）會自動轉寄至alum信箱。自2026/4/1 起，舊系統（Mail2000）無法登入使用，請直接使用alum信箱收發信件。資深退休人員@alum信箱說明專區：https://sites.google.com/as.edu.tw/alum
 url: https://its.sinica.edu.tw/pages/alumni
 contact: 資訊服務處服務台 02-2789-8855
 
