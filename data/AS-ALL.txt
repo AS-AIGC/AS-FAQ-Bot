@@ -1013,13 +1013,6 @@ url: https://www.sinica.edu.tw/Tab/194/2
 contact: aspublic@gate.sinica.edu.tw
 
 
-category: 中央研究院
-title: 中研院歷屆院長歷任院長
-context: | 院長        | 任期         | 備註           ||-------------|--------------|----------------|| 蔡元培（Cai Yuanpei） | 1928－1940 | 創院院長 || 朱家驊（Chu Chia-Hua） | 1940－1957 |         || 胡適（Hu Shih）   | 1957－1962 | 台灣復院後首任院長        || 王世杰（Wang Shih-Chieh） | 1962－1970 |                || 錢思亮（Chien Shih-Liang） | 1970－1983 |          || 吳大猷（Wu Ta-You） | 1983－1994 |                || 李遠哲（Yuan T. Lee）     | 1994－2006 | 諾貝爾化學獎得主               || 翁啟惠（Chi-Huey Wong）     | 2006－2016 |                || 廖俊智（James C. Liao）     | 2016－現任 | 現任院長         |
-url: https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%A4%AE%E7%A0%94%E7%A9%B6%E9%99%A2
-contact: aspublic@gate.sinica.edu.tw
-
-
 category: 國外出差旅費報支
 title: 行政院法規
 context: 一、為規範中央政府各機關（以下簡稱各機關）公務人員，因公出差至國外各地區，其出差旅費之報支，特訂定本要點。
