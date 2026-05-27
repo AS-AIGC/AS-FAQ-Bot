@@ -9,7 +9,7 @@
         "@tailwindcss/forms": "^0.5.7",
         "axios": "^1.15.2",
         "dotenv": "^16.4.7",
-        "express": "^4.22.1",
+        "express": "^4.22.2",
         "express-rate-limit": "^7.5.0",
         "helmet": "^8.1.0"
     },
