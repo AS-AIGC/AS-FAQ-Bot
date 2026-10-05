@@ -6397,6 +6397,13 @@ contact: 02-2789-9432
 
 
 category: 交通
+title: 院區停車
+context: 自115年9月1日上午8時起「車牌辨識及收費系統」出入口管制、訪客繳費方式、聯絡與諮詢電話，請參閱https://dga.sinica.edu.tw/pages/5199
+url: https://dga.sinica.edu.tw/pages/5199
+contact: nan
+
+
+category: 交通
 title: 車輛充電
 context: 中央研究院於人文社會科學館地下2樓停車場停車格，設置3組電動汽車交流型慢充充電柱，提供持有本院停車證之院內同仁(電動汽車)使用。  汽車充電柱收費方式以「員工識別證」進行開通與儲值，經由充電柱感應識別證作為收費扣款之依據，適用規格、收費標準及申請方式，詳見總務處網頁「中央研究院院區電動汽車充電柱停車格收費及使用說明」。
 url: https://dga.sinica.edu.tw/posts/180467
