@@ -83,13 +83,6 @@ contact: 資訊服務處服務台 02-2789-8855
 
 
 category: 全院共用服務-網路資訊
-title: 個人雲端儲存服務
-context: 為提供更友善、現代化的雲端硬碟與線上共同編輯服務，本處將推廣本院 「Google 雲端硬碟(以下簡稱Google Drive）」服務，全面取代原「個人雲端儲存服務(Myspace)」。Google Drive 提供雲端儲存、檔案同步與線上協作等功能，可快速上傳與分享各類文件，並能設定檢視或編輯權限，方便跨裝置存取與團隊合作。原個人雲端儲存(Myspace)將於 115 年 1 月 31 日完成下線，屆時將不再提供存取。請同仁儘早將既有資料備份並轉移至Google Drive ，以防止資料遺失。感謝您的配合與支持。個人雲端儲存服務(Myspace)轉移說明：一、Myspace資料備份方式    1.如已安裝ArkEase Pro Cloud Sync同步工具      請開啟工具後，確認已勾選同步所有目錄。完成同步後，移除ArkEase Pro Cloud Sync即可。      檔案會保留於原設定位置，不會被刪除。    2.如未安裝ArkEase Pro Cloud Sync同步工具            建議登入https://myspace.sinica.edu.tw後，自Web界面下載檔案保存。二、如有使用Myspace資料分享功能    1.新的分享需求，請改以Google Drive分享    2.舊的分享設定，如服務下線後仍有需求，請於服務下線前，逐步改用Google Drive分享。    Google Drive分享設定方式，請參考Google官方說明文件     https://support.google.com/drive/answer/2494822
-url: https://its.sinica.edu.tw/posts/188373
-contact: 資訊服務處服務台 02-2789-8855
-
-
-category: 全院共用服務-網路資訊
 title: 網域名稱服務(DNS)
 context: 網域名稱服務(DNS)提供中研院所管轄之網域名稱及IP位址、字串等資料的對應；另因中研院部分研究所、中心有自行管理DNS網域名稱，故請先向各個研究所、中心的資訊室查詢確認後，再提出申請。詳細申請方式及說明請參考https://its.sinica.edu.tw/pages/1689。
 url: https://its.sinica.edu.tw/pages/1689
@@ -161,22 +154,8 @@ contact: 資訊服務處服務台 02-2789-8855
 
 category: 全院共用服務-網路資訊
 title: 業務用電子郵件服務
-context: 中研院資訊服務處提供業務用Gate電子郵件帳號，供中研院同仁申請，用於處理公務或作為代表信箱。本服務預計於115年導入GWS服務。申請業務用郵件帳號可透過全院電子表單整合平台進行線上申請，或填寫紙本申請單後送交至行政大樓4樓資訊服務處。詳細資訊請參閱https://its.sinica.edu.tw/posts/117175。
+context: 中研院資訊服務處提供業務用電子郵件帳號，供中研院同仁申請，用於處理公務或作為代表信箱。本服務預計於115年導入GWS服務。申請業務用郵件帳號可透過全院電子表單整合平台進行線上申請，或填寫紙本申請單後送交至行政大樓4樓資訊服務處。詳細資訊請參閱https://its.sinica.edu.tw/posts/117175。
 url: https://its.sinica.edu.tw/posts/117175
-contact: 資訊服務處服務台 02-2789-8855
-
-
-category: 全院共用服務-網路資訊
-title: 個人電子郵件服務
-context: GWS服務可使用Thunderbird、Windows Live Mail 2011、Microsoft Outlook、Android、MAC OSX、 iOS (iphone/ipad)等軟體來收發信件。設定值快速一覽表：    SMTP（外寄伺服器）： 伺服器為 smtp.gmail.com，使用 Port 465    IMAP（內送伺服器，支援 SSL）： 伺服器為 imap.gmail.com，使用 Port 993相關設定請參考：https://its.sinica.edu.tw/pages/4694
-url: https://its.sinica.edu.tw/posts/117185
-contact: 資訊服務處服務台 02-2789-8855
-
-
-category: 全院共用服務-網路資訊
-title: 業務用電子郵件服務
-context: 中研院業務電子郵件服務可使用Thunderbird、Windows Live Mail 2011、Microsoft Outlook、Android、MAC OSX、 iOS (iphone/ipad)等軟體來收發信件。基本設定如下：帳號為您的業務帳號，密碼為您的業務密碼，SMTP(外寄伺服器)smtp.sinica.edu.tw，port:25；SMTP with TLS (外寄加密)：smtp.sinica.edu.tw，port:25；SMTPS (外寄加密)：smtp.sinica.edu.tw，port:465；POP(s) (pop內送伺服器)：gate.sinica.edu.tw，POP port:110，POPS port:995；IMAP(s) (imap內送伺服器):gate.sinica.edu.tw，IMAP port:143，IMAPS port:993。服務使用限制IMAP/POP3收信服務及SMTP寄信服務限中研院網路環境使用，若在院外有需要透過第三方收信軟體收發信件請連線VPN服務後使用，其他詳細設定請參考網站https://its.sinica.edu.tw/posts/117220。
-url: https://its.sinica.edu.tw/posts/117185
 contact: 資訊服務處服務台 02-2789-8855
 
 
