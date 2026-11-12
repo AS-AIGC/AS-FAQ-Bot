@@ -160,23 +160,23 @@ contact: 資訊服務處服務台 02-2789-8855
 
 
 category: 全院共用服務-網路資訊
+title: 個人電子郵件服務
+context: GWS服務可使用Thunderbird、Windows Live Mail 2011、Microsoft Outlook、Android、MAC OSX、 iOS (iphone/ipad)等軟體來收發信件。郵件軟體設定值：    SMTP（外寄伺服器）： 伺服器為 smtp.gmail.com，使用 Port 465    IMAP（內送伺服器，支援 SSL）： 伺服器為 imap.gmail.com，使用 Port 993相關設定請參考：https://its.sinica.edu.tw/pages/4694
+url: https://its.sinica.edu.tw/pages/4694
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
+title: 業務用電子郵件服務
+context: 中研院業務電子郵件服務可使用Thunderbird、Windows Live Mail 2011、Microsoft Outlook、Android、MAC OSX、 iOS (iphone/ipad)等軟體來收發信件。郵件軟體設定值：    SMTP（外寄伺服器）： 伺服器為 smtp.gmail.com，使用 Port 465    IMAP（內送伺服器，支援 SSL）： 伺服器為 imap.gmail.com，使用 Port 993
+url: https://its.sinica.edu.tw/pages/4694
+contact: 資訊服務處服務台 02-2789-8855
+
+
+category: 全院共用服務-網路資訊
 title: 電子郵件服務
 context: 電子郵件提供垃圾信阻絕服務，用於阻擋垃圾與病毒郵件，阻絕設備有五項準則用於決定郵件是否放行，包括封鎖不明收件者、封鎖黑名單表列者、封鎖病毒信件、隔離已確認的垃圾信、放行被加標記的疑似垃圾信以及放行正常信件，已確認為垃圾信的郵件會被置放在阻絕設備的隔離區，使用者會收到當日的隔離通知信，內容記載每封垃圾信的日期、來源地址和主旨。使用者可以檢視隔離通知信的內容，以救回被誤判的正常信件、刪除垃圾信或設定黑白名單。連線至信件隔離區首先要請您確認目前是位於中研院內網路環境，而有兩種方式您可以連線至信件隔離區，方法一打開垃圾隔離區摘要信件，點選看您所有的隔離信件或管理您的參數設定，會直接連結至隔離區；方法二若已經刪除所有垃圾隔離區摘要信件，請直接連線到網址https://fmail0.its.sinica.edu.tw。詳細說明請參考網站：https://its.sinica.edu.tw/posts/117204隔離區中分為隔離區信件與參數選擇兩個項目，在隔離區信件中您可以使用寄送、白名單、刪除三種處理方式可以處理信件，寄送僅將該封信件寄送到個人信箱中，白名單會將該信件寄送到個人信箱中，並將這封信件的寄件者加入白名單中，刪除功能會將信件刪除，若不刪除隔離區信件系統會保留約30天，並自動刪除過多的垃圾信件。關於隔離區信件詳細說明請參考網站：https://its.sinica.edu.tw/posts/117205，參數選擇中有黑名單/白名單、隔離區設定、及啟用/停用垃圾郵件過濾功能，關於參數設定可以參考https://its.sinica.edu.tw/posts/117206，您可以按下右上角sign out可登出隔離區。
 url: https://its.sinica.edu.tw/posts/117203
-contact: 資訊服務處服務台 02-2789-8855
-
-
-category: 全院共用服務-網路資訊
-title: 業務用電子郵件服務
-context: 自113年4月23日起，Gate業務用電子郵件信箱之 Webmail 操作介面將全面「強制」啟用雙驗證功能，結合手機的OTP（One Time Password）機制，加強您電子郵件信箱的安全。強制啟用OTP操作說明：登入程序完成帳密驗證後，畫面會顯示2維條碼，請於行動裝置下載安裝Google Authenticator APP後，掃描2維條碼，取得6位數動態認證碼。完成登入後，系統提供2種雙驗證使用方式，第一種方法是使用@Mail2000APP設定雙重驗證，第二種方法是維持Google Authenticator雙驗證，您可以依需求切換驗證方式。請注意，如發生無法收取驗證碼狀況，導致無法登入修改設定時，須本人或資訊室人員填寫服務洽詢單( https://8855.sinica.edu.tw )，由系統管理員協助設定與重新啟用，設定時間約0.5個「工作天」。請參考https://its.sinica.edu.tw/posts/117218 網站以了解更詳細的設定方式。
-url: https://its.sinica.edu.tw/posts/117218
-contact: 資訊服務處服務台 02-2789-8855
-
-
-category: 全院共用服務-網路資訊
-title: 業務用電子郵件服務
-context: 使用中研院的Gate業務用電子郵件服務時，會收到電子郵件登入成功或登入失敗的訊息通知。如收到登入成功通知，請確認該時間點是否為本人登入行為；若您收到登入失敗通知，通常是一般駭客嘗試想要登入信箱所產生的，表示該嘗試登入並未成功，只要確認好您的帳號密碼強度夠強即可，並經常透過webmail ，點選個人設定，由信箱安全功能查閱登入紀錄來確認是否有意異常登入狀況。 資訊處所提供的電子郵件服務，具備自動防禦暴力破解法功能，如單一登入位址(IP)反覆嘗試登入並且登入失敗，系統會自動阻擋該登入位址一段時間，以阻止該嘗試登入行為。 其他相關說明請參考https://its.sinica.edu.tw/posts/117228
-url: https://its.sinica.edu.tw/posts/117228
 contact: 資訊服務處服務台 02-2789-8855
 
 
